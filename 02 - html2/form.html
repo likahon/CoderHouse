@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <h1>
+        <form method="POST">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" placeholder="Nombre">
+
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Email">
+
+            <label for="contraseña">Contraseña</label>
+            <input type="password" name="contraseña" placeholder="Contraseña">
+            <label for="comentarios">Texto libre:</label>
+            <textarea name="comentarios" cols="30" rows="10" placeholder="Escribe un texto"></textarea>
+
+            <div>
+                <label for="sexo">Hombre</label>
+                <input type="radio" name="sexo">
+                <label for="sexo">Mujer</label>
+                <input type="radio" name="sexo">
+            </div>
+
+            <input type="checkbox" name="Checkbox" id="">
+            <label for="Checkbox">Aceptar términos y condiciones</label>
+            
+            <fieldset>
+                <legend>Talles de remera</legend>
+                <label for="talles">Elige un talle:</label>
+
+                <select name="talles">                    
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="XL">Extra Large</option>
+                </select>
+            </fieldset>
+
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpiar">
+            <input type="button" value="Guardar">
+
+        </form>
+    </h1>
+
+</body>
+
+</html>
