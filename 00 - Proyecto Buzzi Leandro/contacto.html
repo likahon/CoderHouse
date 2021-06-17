@@ -1,12 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
 </head>
+
 <body>
-    
+    <header>
+        <ul>
+            <a href="index.html">
+                <li>Inicio</li>
+            </a>
+            <a href="presentacionEquipo.html">
+                <li>¿Quienes somos?</li>
+            </a>
+            <a href="producto.html">
+                <li>Productos</li>
+            </a>
+            <a href="portfolio.html">
+                <li>Portfolio</li>
+            </a>
+        </ul>
+    </header>
+
+    <section>
+        <h1>Contacto</h1>
+        <article>
+            <h3>Dejanos tus datos con tu consulta y te responderemos a la brevedad</h2>
+
+                <form>
+                    <label for="nombre">Nombre y Apellido</label>
+                    <input type="text" name="nombre" placeholder="Nombre">
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" placeholder="Email">
+                    </div>
+                    <div>
+                        <fieldset>
+                            <legend>Tipo de sitio</legend>
+                            <label for="talles">Elige un estilo:</label>
+
+                            <select name="talles">
+                                <option value="landing">Landing</option>
+                                <option value="ecommerce">e-commerce</option>
+                                <option value="Blog">Blog</option>
+                                <option value="Blog">Buscador</option>
+                            </select>
+                        </fieldset>
+                    </div>
+                    <div>
+                        <label for="comentarios">Consulta</label>
+                        <textarea name="comentarios" cols="30" rows="10" placeholder="Escribe un texto"></textarea>
+                    </div>
+
+                    <input type="checkbox" name="Checkbox" id="">
+                    <label for="Checkbox">Recibir novedades</label>
+
+                    <div>
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Limpiar">
+                        <input type="button" value="Guardar">
+                    </div>
+                </form>
+
+        </article>
+    </section>
+
+    <footer>
+
+    </footer>
 </body>
+
 </html>
