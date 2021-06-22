@@ -1,0 +1,140 @@
+<!-- camelCase se usa para clases y nombres de archivos (en singular).
+
+Guiones_Bajos para identificadores.
+
+Al body nunca hay que aplicarle margin, solo padding
+
+    Estilos de TEXTO:
+
+El selector universal (*) le aplica las propiedadesestablecidas del css a todo el sitio.
+
+font-family: La propiedad font-family define una lista de fuentes o familias de fuentes, con un orden de prioridad, para utilizar en un elemento seleccionado. A diferencia de la mayoría de las propiedades CSS, los valores se separan con comas (",") para indicar que son valores alternativos. 
+
+font-weight: La propiedad font-weight de CSS especifica el peso o grueso de la letra. Algunos tipos de letra sólo están disponibles en normal y bold .
+
+text-align: Permite alinear el texto.
+
+text-transform: a propiedad CSS text-transform especifica el cambio entre mayúsculas y minúsculas del texto de un elemento. Puede ser usada para que un texto aparezca completamente en mayúsculas, en minúsculas(), o con la primera letra de cada palabra en mayúscula (capitalize).
+
+text-decoration: Suma decoraciones al texto (subrayado, tachado, eliminar subrayado, etc)
+
+line-height: marca interlineado del texto. (se recomienda poner un valor superior al font-size establecido, se recomienda entre 2 o 4 px más).
+
+word-spacing: establece el espaciado entre palabras.
+
+letter-spacing: establece el espaciado entre letras.
+
+font: define las 4 propiedades de las fuentes en 1 sola línea (estilo, weight, size y family) (obligatorias a definir FONT SIZE y FONT FAMILY)
+
+ESTILOS PARA LISTAS:
+
+list-style-type: La propiedad list-style-type establece el marcador que muestra cada elemento de las listas HTML. Por defecto, los navegadores muestran unos pequeños círculos rellenos para cada elemento de las listas no ordenadas <ul> y una numeración decimal para los elementos de las listas ordenadas <ol>
+
+list-style-image: La propiedad list-style-image establece una imagen como marcador que muestra cada elemento de las listas HTML.
+
+list-style-position: Cambia la posición de las viñetas.
+
+list-style: permite abreviación.
+
+
+ESTILO PARA FONDOS:
+
+background-color: cambia el color del fondo del contenedor o relleno.
+
+background-image: aplica una imagen al fondo.
+
+background-repeat: Indica como se va a repetir la imagen.
+
+background-position: Define la posición donde va a empezar (right, left o center) o (top, center o bottom)
+
+background-size: Cambia el tamaño de la imagen de fondo (no usar unidades de medida)
+
+UNIDADES DE MEDIDA:
+
+Absolutas:
+Px: es la unidad que usan las pantallas.
+
+Relativas:
+Rem: relativa a la configuración de tamaño de la raíz (etiqueta html)
+Porcentaje: tomando en cuenta que 16px es 100%
+Viewport: se utilizan para layouts responsivos.
+
+ESTILOS PARA BORDES:
+
+border-width: Establede el ancho para el borde. (podemos definir cada borde exterior de la tabla ingresando la medida en px, ej: 4px 2px 1px 3px, si no se define, se pone por defecto)
+
+border-style: define el estilo, por defecto es none.
+
+border-color: establece color al borde.
+
+border(abreviación): border también permite abreviarlo.
+
+TIPOGRAFÍAS EN CSS:
+
+GOOGLE FONTS
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cssClaseCuatro.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nesciunt libero quam, nostrum cupiditate, quae,
+        facere nulla voluptatum numquam saepe modi quasi blanditiis eius. Impedit blanditiis placeat reiciendis
+        necessitatibus laboriosam.</p>
+
+    <a href="https://www.google.com/webhp?hl=es&ictx=2&sa=X&ved=0ahUKEwjziq6l6anxAhVzr5UCHbbzD4kQPQgJ">Prueba de
+        link</a>
+
+    <ul>
+        <li>Carlitos 1</li>
+        <li>Carlitos 2</li>
+        <li>Carlitos 3</li>
+        <li>Carlitos 4</li>
+        <li>Carlitos 5</li>
+    </ul>
+
+
+    <table Border="1" Cellpadding="7">
+        <caption>Tabla de Facturas</caption>
+        <colgroup>
+            <col>
+            <col style="background-color: red;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Calificación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Carlos</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Roberto</td>
+                <td>6</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Mariano</td>
+                <td>2</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

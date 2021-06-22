@@ -1,0 +1,41 @@
+p {
+    font-family: 'Roboto', sans-serif; /*Traido desde google fonts*/
+    _font-size: 20px;
+    _font-style:italic;
+    _font-weight: 700;
+    font: sans-serif 20px/24px italic 700;
+    color: #0033ff;
+    text-align:right;
+    text-transform: capitalize;
+    line-height: 24px;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type:decimal;
+    list-style-position:unset;
+    list-style:none;
+    list-style: url();
+}
+
+body {
+    _background-color: red;
+    background-image: url(../assets/28524677884_7386a4bc22_o.jpg);
+    _background-repeat: repeat-x;
+    _background-repeat: repeat-y;
+    background-position: center;
+    _background-size: cover;    
+}
+
+table {
+    border-width: 5px 5px 5px 5px;
+    border-style: solid;
+    border-color: #0033ff;
+}
