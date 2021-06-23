@@ -1,0 +1,49 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul.menuNav li {
+    text-decoration: none;
+    list-style-type:none;
+    font-size: 14px;
+    text-align: left;
+    font-weight: 900;
+    color: black;
+}
+
+div.infoSobreNosotros {
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+h2{
+    color: blueviolet;
+}
+
+th {
+    font-weight: 900;
+}
+
+.tipoSitio{
+    font-weight: 900;
+}
+
+.benSitio{
+    font-weight: 900;
+}
+body{
+    background-image: url(../assets/fondo1.jpg);
+    _filter:blur();
+}
+
+form {
+    font-size: 16px;
+    font-weight: 900;
+}
+tr{
+    background-color: whitesmoke;
+}
