@@ -1,0 +1,60 @@
+body{
+    height: 100vh;
+    margin: 2vh;
+}
+
+h1{
+    display: inline;
+    _float: right;
+}
+
+div{
+    display: inline;
+}
+
+a{
+    color: purple;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+ul{
+    text-align: left;
+    list-style-type:none
+}
+
+li{
+    display: inline;
+    margin: 10px;
+    padding: 5px;
+    border: solid 2px black;
+    border-radius: 7px;
+}
+
+.pruebaPosition {
+    position: sticky;
+    top: 50px;
+    left: 50px;
+    background-color: red;
+}
+.submenu li{
+    margin: 1%;
+    padding: 1%;
+    display: inline;
+}
+
+ul.submenu ul{
+    position:absolute;
+    display: none;
+}
+
+ul.submenu ul li{
+    display: block;
+}
+
+ul.submenu li:hover ul{
+    display: block;
+    background-color: blueviolet;
+    position: absolute;
+    z-index: 10;
+}

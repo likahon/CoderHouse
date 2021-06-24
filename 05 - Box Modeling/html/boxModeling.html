@@ -1,0 +1,97 @@
+<!-- Content: espacio para el texto o imagen.
+
+Padding: separación entre el borde y el contenido de la caja, espacio interior (ej: border-top: solid 1px red). 
+
+Border: el límite entre el elemento y el espacio externo.
+
+Margin: separación entre el borde y el afuera de la caja, espacio exterior.
+
+Ancho (Width): controla la anchira de la caja de los elementos, no admite valores negativos, se calcula a partir de la anchura de su elemento padre.
+
+Alto (height): Controla la altura de la caja de los elementos, tampoco admite valores negativos y aquellos en porcentaje se calculan a partir de la altura de su elemento padre.
+
+Se declaran medidas topes con max-width y max-height 
+
+Cuando un elemento tiene un alto o ancho fijo, cualquier contenido que exceda la caja, será visible.
+
+OVERFLOW:
+visible: valor por defecto, el excedente es visible.
+hidden: el excedente no se muestra (lo corta, recomendado).
+scroll: genera una barra de scroll.
+auto: genera scroll en el eje necesario.
+
+DISPLAY:
+
+El estandar html clasifica a todos sus elementos como elementos en línea (inline) *marcar texto, imagenes y formularios y de bloque (block) .
+
+display: block; (convierte un elemento en uno de bloque)
+display: inline; (convierte un elemento en uno de línea)
+
+inline-block: toma lo mejor de ambos y deja usar margin.
+
+max-content achica el tamaño del bloque al de su contenido.
+
+display: none; oculta contenido y no sigue ocupando el lugar donde está (a diferencia del visibility:hidden que se oculta pero sigue ocupando su espacio).
+
+FLOAT:
+
+Es una propiedad que mueve un elemento hacia la izq o der desde su posición, todo lo que viene despues se acomoda en el hueco que queda vacío. (todo elemento flotado deja de empujar en alto a su contenedor. Este ultimo colapsa su altura si todos los elementos flotan.). la forma de resolverlo es poniendo overflow con scroll.
+
+Propiedad CLEAR: permite modificar el comportamiento por defecto del posicionamiento flotante para forzar a un elemento a mostrarse debajo de cualquier elemento flotante. (el valor que debe utilizarse es el del lado que no queremos que toque otro elemento, left, right o top).
+
+Propiedad Position: Propiedad para ubicar un elemento con una libertad muy flexible, valores relative, absolute, fixed sticky. Top: se calcula desde la parte superior, el left desde la izq.... (es para ubicar un elemento en un lugar específico). 
+Relative: El elemento es posicionado de acuerdo al flujo normal del documento, y luego es desplazado en relación a sí mismo.
+Absolute: El elemento es removido del flujo normal del documento, sin crearse espacio alguno para el mismo en el esquema de la página. 
+Es posicionado relativo a su padre, siempre y cuando su padre tenga “position:relative”. De lo contrario, se ubica relativo al body. Se recomienda establecer un ancho y alto (width, height). 
+Fixed y Sticky: Ambos métodos permiten que el elemento se mantenga visible, aunque se haga scroll.
+
+El position (tanto relative como absolute) se usa, entre otras, para hacer un menú que tenga un submenú emergente. Los ítems del primero son relativos, sirven como borde de cualquier hijo. 
+
+La lista dentro de un list-item es absoluta. Por defecto, la sublista tiene display: none. Recién cuando un list-item detecte el :hover, si adentro tiene una lista, dale display: block (no te preocupes, esto quedará quedará más claro con el ejemplo que veremos a continuación).
+
+PROPIEDAD Z-INDEX:
+
+El z-index entra en juego cuando dos elementos que tienen position se superponen. Esta propiedad acepta como valor el número (sin ninguna unidad); a valor mas alto, se mostrara por encima de los demas elementos.
+
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/css.css">
+    <title>Clase 5</title>
+</head>
+
+<body>
+
+    <header>
+        <ul class="submenu">
+            <li><a href="https://www.google.com/">CONTACTO</a>
+
+                <ul>
+                    <li><a href="https://www.youtube.com/results?search_query=Sennheiser+GAME+ZERO+black"></a>submenu1</li>
+                    <li><a href="https://www.youtube.com/results?search_query=Sennheiser+GAME+ZERO+black"></a>submenu2</li>
+                    <li><a href="https://www.youtube.com/results?search_query=Sennheiser+GAME+ZERO+black"></a>submenu3</li>
+                </ul>
+            </li>
+            <li><a href="https://www.google.com/">MENSAJES</a></li>
+            <li><a href="https://www.google.com/">TICKETS</a></li>
+        </ul>
+    </header>
+
+<div>
+    <h1>Asdasd1</h1>
+</div>
+
+<div class="pruebaPosition">Position</div>
+    
+</body>
+
+</html>
