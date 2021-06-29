@@ -1,0 +1,82 @@
+<!-- 
+
+Beneficios Flexbox:
+
+Distribuir los elementos en sentido vertical y horizontal.
+Facilitar la adaptacion del contenido en distintos dispositivos.
+Redefinir el sentido del flujo de los elementos.
+Alinear los elementos respecto al padre y los hermanos.
+
+Propiedades de los padres:
+
+Display: flex (el que inicia): indicará que sus hijos serán "Flexibles". (Debemos definirlo ya que la propiedad por defecto es Block).
+flex-direction: elegir dirección vertical u horizontal. (Row por defecto). row-reverse, el primero se ubica sobre el mid-end (el orden va de izquierda a derecha). column se ubican sobre el cross axis desde el cross start, column-reverse funciona igual que el row-reverse
+flex-wrap: ¿se hará multilínea cuando llegue al límite?.
+etc...
+
+Flex-Wrap: Podemos especificar si los items pueden saltar a otra línea o no.
+
+flex-flow: forma abreviada para usar las propiedades flex-direction y flex-wrap.
+
+justify-content: nos va a permitir alinear los elementos hijos. Puede ser de forma vertical u horizonal segun especifiquemos en flex-direction. Nos ayuda a distribuir los flex items en el contenedor. 
+flex-start alinea los elementos desde el lado izq sin espacio entre ellos. 
+Si queremos que se ubiquen desde el main-end uisando flex-end (12345). 
+Center lo utalizaremos para alinear los items en el centro. 
+space-between: hace que los flex items tomen la misma distancia o espaciado entre ellos y lo reparte entre partes iguales.
+soace-around: agarra el espacio sobrante y lo divide por la cantidad de elementos +2 (ejemplo con 5 elementos, lo divide por 10).
+space-evenly: el espacio entre los items es igual, el espacio es el mismo que el tamaño de cada elemento.
+LOS ATRIBUTOS ANTERIORES PUEDEN USARSE PARA HACER UN MENÚ, ESTO LO UTILIZAMOS PARA SEPARAR Y ACOMODAR LOS ITEMS.
+
+ALIGN-ITEMS: nos permite alinear los items en el eje perpendicular al que estemos usando con justify-content.(si justify-content es row, align-items sera column).
+stretch: trata de llenar toda la altura o anchura del contenedor, siempre y cuando los hijos no tengan propiedades de dimensiones definidas.
+baseline: alinea los flex items en su propia línea de base, es decir, alinea los contenedores según el texto que tenga.
+
+ALIGN-CONTENT: solo tiene efecto cuando el contenedor flexible tiene varias lineas de flex items. Si se colocan sobre una sola línea, esta propiedad no tiene ningun efecto sobre el diseño.Para aplicarlo se necesita tener el atributo flex-wrap, que permita verificar los ejes verticarles. flex-start, space-between, space-around, etc.
+
+
+APLICAR A FLEX ITEMS (HIJOS):
+
+ORDER: modifica el orden de aparicion de un elemento. Se debe ingresar un numero entero o negativos.
+Flex-basis: define el ancho de un elemento inicial. Este valor viene configurado en auto. Actua como máximo o mínimo al usar flex-grow o flex-shrink
+flex-grow: define la capacidad de un elemento de crecer, cuando en el contenedor todavia hay espacio sobrante. Se configura con un valor numérico entero natural (no acepta negativos). Por defecto el valor es 0.
+flex-shrink: hace lo mismo que flex-grow, pero con la capacidad de achicarse.
+
+
+UNIFICACIÓN FLEX:
+
+La propiedad flex unifica las propiedades grow, shrink y basis. 
+
+
+
+
+
+
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="../css/style.css">
+ </head>
+ <body>
+
+<header>Header</header>
+
+    <section>
+        <article>
+            <img src="../assets/imagendiseno.jpeg" alt="">
+            <img class="flexEndImg" src="../assets/imagendiseno.jpeg" alt="" >
+            <img src="../assets/imagendiseno.jpeg" alt="">
+        </article>
+        <aside>Aside</aside>
+    </section>
+
+    
+
+<footer>Footer</footer>
+     
+ </body>
+ </html>

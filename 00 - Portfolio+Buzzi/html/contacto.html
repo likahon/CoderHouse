@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../css/css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <ul class="menuNav">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="presentacionEquipo.html">Sobre nosotros</a></li>
+            <li><a href="producto.html">Productos</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <h1>Contacto</h1>
+        <article>
+            <h3>Dejanos tus datos con tu consulta y te responderemos a la brevedad</h3>
+
+            <form>
+                <label for="nombre">Nombre y Apellido</label>
+                <input type="text" name="nombre" placeholder="Nombre">
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="Email">
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>Tipo de sitio</legend>
+                        <label for="productos">Elige un estilo:</label>
+
+                        <select name="productos">
+                            <option value="landing">Landing</option>
+                            <option value="ecommerce">e-commerce</option>
+                            <option value="blog">Blog</option>
+                            <option value="buscador">Buscador</option>
+                        </select>
+                    </fieldset>
+                </div>
+                <div>
+                    <label for="comentarios">Consulta</label>
+                    <textarea name="comentarios" cols="30" rows="10" placeholder="Escribe un texto"></textarea>
+                </div>
+
+                <input type="checkbox" name="checkbox" id="">
+                <label for="Checkbox">Recibir novedades</label>
+
+                <div>
+                    <input type="submit" value="enviar">
+                    <input type="reset" value="limpiar">
+                    <input type="button" value="guardar">
+                </div>
+            </form>
+
+        </article>
+    </section>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+body {
+    height: 100px;
+    display: flex;
+    /* flex-direction: column;
+    flex-wrap: nowrap; */
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+img{
+    height: 40%
+}
+
+section {
+    display: flex;
+    height: 75vh;
+    justify-content: space-around;
+    background-color: aquamarine;
+}
+
+article{
+    width: 80%;
+    background-color: plum;
+    order: 2;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    /* flex-grow: 1; */
+}
+
+aside{
+    width: 15%;
+    flex-basis: 15%;
+    background-color: rgb(110, 100, 253);
+    order: 1;
+    /* flex-grow: 0; */
+}
+
+.flexEndImg{
+    style="align-self: flex-end;"  
+}
