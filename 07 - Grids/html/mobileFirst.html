@@ -1,0 +1,66 @@
+<!-- 
+Antes de hablar de “Mobile-First”, debemos hacer una referencia al llamado diseño responsive. Se refiere a la idea de que un sitio web debería mostrarse igual de bien en todo tipo de dispositivo, desde monitores de pantalla panorámica hasta teléfonos móviles. 
+Es un enfoque para el diseño y desarrollo web que elimina la distinción entre la versión amigable para dispositivos móviles de un sitio web, y su contraparte de escritorio. Con un diseño responsive, ambos son lo mismo.
+
+Mobile First significa crear el código primero para los dispositivos más pequeños que los usuarios probablemente tengan, como teléfonos o tabletas. Implica trabajar en el dispositivo más pequeño, y luego acumular desde allí todo en el mismo código y el mismo proyecto, en lugar de hacer uno nuevo para cada tamaño de pantalla. 
+
+MEDIA QUERIES
+
+Cualquier estilo dentro del siguiente Media Querie se ejecutará cuando el tamaño de la pantalla sea de al menos 768px de ancho (tablet portrait iPad Mini), pero no cuando el tamaño de la pantalla sea menor.
+
+El diseño responsive se logra a través de "Media Queries" de CSS. Pensemos en las Media Queries como una forma de aplicar condicionales a las reglas de CSS. Estas últimas le indican al navegador qué reglas debe ignorar o aplicar, dependiendo del dispositivo del usuario.
+
+EJEMPLO:
+
+@media only screen and (min-width: 768px) {
+    .body {
+            background-color: #000000;
+      }
+}
+Lo que nos indica que mientras el tamaño de la pantalla o width sea menor al establecido, se va a mostrar el background color del ejemplo, si no, se muestra otro.
+
+
+Medidas más comunes:
+
+320px
+Para dispositivos con pantallas pequeñas, como los teléfonos en modo vertical
+
+480px
+Para dispositivos con pantallas pequeñas, como los teléfonos, en modo horizontal
+600px
+Tabletas pequeñas, como el Amazon Kindle (600×800) y Barnes & Noble Nook (600×1024), en modo vertical
+768px
+Tabletas de diez pulgadas como el iPad (768×1024), en modo vertical
+1024px
+Tabletas como el iPad (1024×768), en modo horizontal, así como algunas pantallas de ordenador portátil, netbook, y de escritorio
+1200px
+Para pantallas panorámicas, principalmente portátiles y de escritorio
+
+META VIEWPORTS:
+
+Las páginas optimizadas para diferentes dispositivos deben incluir la etiqueta <meta> viewport, en el encabezado del documento HTML. Una etiqueta <meta> viewport da al navegador las instrucciones sobre cómo controlar las dimensiones, y el ajuste a escala de la página.
+Usa la etiqueta <meta> viewport para controlar el ancho y el ajuste de la ventana de visualización del navegador.
+Incluye width=device-width para hacer coincidir el ancho de la pantalla en píxeles independientes del dispositivo.
+Incluye initial-scale=1 para establecer una relación de 1:1 entre los píxeles CSS, y los píxeles independientes del dispositivo.
+
+El uso del valor de width=device-width indica a la página que debe hacer coincidir el ancho de la pantalla en píxeles independientes del dispositivo. Esto permite que la página realice el reprocesamiento del contenido para adaptarlo a diferentes tamaños de pantalla.
+
+
+
+
+ -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

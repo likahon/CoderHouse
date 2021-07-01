@@ -1,0 +1,87 @@
+<!-- 
+Es un sistema de maquetación en 2d que nos permite definir y alinear elementos en filas y columnas. Nos permite hacer diseños en tablas, pero responsive
+
+CSS Grid Layout: contiene funciones de diseño dirigidas a los desarrolladores.
+
+IMPLEMENTAR GRIDS:
+
+Surge la necesidad mas potente y toma las ventajas de Flexbox, suma mejoras y caract. que permiten crear cuadrículas sencillas y potentes. Grid toma la filosofia y la base del sistema Flexbox. No significa que lo reemplaza, si no que pueden convivir. Esta pensado para estructuras grandes y complejas
+
+display: grid; / inline-grid (elemento de línea)
+
+PROPIEDADES DE PADRE:
+Además de usar PX, podemos usar "fr" para usar fracciones y que sea responsive. Ejemplo grid-template-columns 1fr 3fr (1/4 y 3/4).
+
+repeat: Si necesitas hacer muchas columnas y filas iguales. grid-template-columns repeat(20, 100px). grid-template-rows repeat(4, 100px) (20 columnas por 4 filas)
+
+auto: usa el espacio restante: grid-template-columns 40px auto.
+
+grid-template-columns: establece el tamaño de las columnas (eje horizontal)grid-template-columns 40px 100px (2 columnas)
+grid-template-rows: establece el tamaño de cada fila (eje vertical). Ejemplo: grid-template-rows 40px 100px (2 filas)
+grid-template-areas:  posible indicar el nombre y la posición concreta de cada área de la cuadrícula. Utiliza la propiedad grid-template-areas, donde debes especificar el orden de las áreas. Luego, en cada ítem hijo, usas la propiedad grid-area para indicar el nombre del área en cuestión. A los hijos se les debe asignar un alias, por ejemplo: grid-area: header;,grid-area: footer;, etc.
+
+gap: separa los elementos.
+
+
+Ejemplo:
+
+Body{
+    display:grid;
+    grid-template-rows: 100px 1fr 1fr 75px;
+    grid-template-columns: 20% auto 15%
+"nav encabezado encabezado"
+"nav prods aside"
+"nav servs aside"
+"nav footer footer"
+
+Ejemplo de espacio en blanco (con punto .)
+"nav . ."
+"nav prods aside"
+"nav servs aside"
+"nav footer footer"
+}
+
+
+Posición de hijos (Desde padre):
+
+Justify-items y align-items:Existen propiedades que se pueden utilizar para colocar los ítems dentro de la cuadrícula. Es posible distribuir los elementos de una forma muy sencilla y cómoda: justify-items y align-items, que ya conocemos del módulo CSS Flexbox (ubica las cosas dentro de las celdas)
+
+justify-content(horizontal) y align-content (vertical): Es posible utilizar las propiedades justify-content o align-content para cambiar la distribución de todo el contenido en su conjunto.
+
+
+ -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/css.css" />
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <span>Header</span>
+      </header>
+      <nav>
+        <span>Nav</span>
+      </nav>
+      <section id="productos">
+        <span>Productos</span>
+      </section>
+      <section id="servicios">
+        <span>Servicios</span>
+      </section>
+      <aside>
+        <span>Publicidad</span>
+      </aside>
+      <footer>
+        <span>Footer</span>
+      </footer>
+</body>
+</html>
+
+  
