@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  header {
+    background-color: plum;
+    height: 5%;
+    margin-bottom: 2%;
+    font-size: 1rem;
+  }
+  img {
+    width: 100%;
+  }
+  
+  .container{
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-rows: 200px 200px 200px;
+      grid-template-columns: 200px 200px 200px;
+  }
+  
