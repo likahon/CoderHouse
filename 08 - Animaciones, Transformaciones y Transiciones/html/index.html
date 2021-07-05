@@ -1,0 +1,119 @@
+<!-- 
+
+GRADIENTES:
+
+el gradiente se usa en la propiedad background: background-image: linear-gradient(XXXXX, red, yellow);
+
+Ejemplo de Gradrientes:
+
+radial-gradiant, repeating-linear-gradient, linear-gradient.
+
+De un lado a otro:
+
+linear-gradient(to top, red, yellow);
+
+To Bottom: de arriba hacia abajo.
+To Top: de abajo hacia abajo.
+To Right: de izq a der.
+To Left: de der a izq
+
+Varios Colores:
+
+linear-gradient(to top, red, yellow);
+
+repeating-linear-gradient (90deg, transparent, transparent)
+
+radial-gradiant: 
+(hay generadores de gradientes)
+
+TRANSFORMACIONES:
+
+Modificación de la forma en la que se ve un elemento.
+Nos permite un elemento de lugar, escalar el tamaño, voltear y cambiar perspectiva.
+
+
+
+transform:translate(): cambia la ubicación del objeto. Requiere 2 números y su unidad, separados por coma (el rpimero es el ejehorizontal, el segundo el vertical).
+
+Los valores positivos mueven a la derecha/abajo, los negativos a la izq/arriba.
+
+Ejemplo: transform: translate(10px, 20px);
+
+transform:rotate(45deg): (si es positivo rotamos en sentido horario, en negativo, sentido antihorario)
+
+transform: rotateX (70deg);,transform: rotateY (70deg);,transform: rotateZ (70deg); permite hacer rotación en los ejes x,y, Z
+
+transform:scale(); permite escalar objetos, requiere 2 valores, los valores que son mayotes a 1, permite agrandarlo, entre 0 y 1 los achica. Al igual que el rotateX, tiene scaleX y scaleY.
+
+
+transform: skew(): permite deformar objetos. Sus parametros son los angulos de deformación en grado, puede tener hasta 2 números separados por coma, primero en eje x y segundo en eje y( como el resto de los transform).
+
+
+TRANSICIONES:
+
+transition nos permite definir la transición entre 2 estados de un elemento. Hay diferentes estados que pueden ser definidos y para eso utilizaremos pseudo-clases como por ejemplo Hover, active, Focus, etc.
+
+Ejemplo en CSS: 
+
+.classDeEjemplo{
+    height: 100px;
+    width
+    transition:height 2s, width 1s; (podemos sumar mas separandolo por comas, si queremos poner las mismas propiedades, debenmos usar all)
+}
+
+.classDeEjemplo:hover{
+    transform:skewY(20deg);
+    height: 200px;
+}
+
+
+ANIMACIONES:
+
+Nos permite animar la transicion entre un estilo y otro, ademas nos permite repetirlo y configurar cuando queremos que comience.
+
+Para generarlo necesitamos 2 componentes,  un estulo y un conjunto de fotogramas.
+Para comenzar debemos configurar la animacion, usaremos la propiedad "animation" y sus sub-propiedades. Con ellas no solo configuramos el ritmo y la duración de la animación si no tambien otros detalles sobre la secuencia. Con estas propiedades no definimos la apariencia de la animación.
+
+Ejemplo:
+
+.animationChangeColorz {
+        animation-name: changeColor; nos permite asignar un alias a la animacion.
+        animation-iteration-count: infinite; nos dice la cantidad de veces que se repetirá la animación
+        animation-timing-function: easy-in; nos permite indicar el ritmo de la animación, es decir, establece curvas de modificación de la velocidad de la misma (puede ser lineal, variable, etc.)
+        animation-duration: 2s; nos indica la duración de la repetición de la animación.
+        animation-delay: 0s; nos indica cuanto comenzará a repetirse la animación. Es el retardo desde que el elemento se carga y comienza la animación.
+}
+
+Keyframes:
+Los fotogramas o keyframes son puntos específicos en la secuencia de la animación.
+Cada fotograma describe cómo se verá el elemento animado en un momento dado.
+Usan porcentaje para indicar en qué momento de la secuencia de la animación tiene lugar: 0% es el principio, 100% es el estado final de la animación.
+
+Se comienza en 0% y terminamos en 100% (podemos elegir los porcentajes que querramos dentro de esos valores, pero debemos asignarlos para comenzar y finalizar).
+
+@keyframes changeColor {
+   from{ width: 100%; }
+   50%{ width: 20%;
+     background-color: blueviolet; }
+   to{ width: 100%;
+     background-color:violet;}
+}
+
+
+
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/css.css">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
