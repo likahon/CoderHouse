@@ -100,3 +100,17 @@ section .presEquipo div{
     margin: 0.7rem;
     font-weight: 300;
 }
+
+.equipoGrid {
+    font-size: 30px;
+display: grid;
+background-color: beige;
+grid-template-columns: 100px 100px 100px;
+}
+
+.equipoGrid > *{
+    background-color: brown;
+    border: 1px solid black;
+    text-align: center;
+    color: white;
+    }
