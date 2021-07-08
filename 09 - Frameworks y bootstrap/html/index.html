@@ -1,0 +1,171 @@
+<!-- 
+Librerías: jQuery, Mootools, React: Es una colección de elemntos, un conjunto de rutinas que poseen un proposito en concreto.
+
+Framework: es un marco de trabajo. Se trata de un conjunto de herramientas y códigos, para trabajar de a cuerdo a una metodología, utilizando determinados patrones. (bootstrap es un framework para css).
+
+BOOTSTRAP: Fue creado por twitter, se usa para crear interfaces web con CSS y JS. Permite adaptar la interfaz del sitio web al tamaño del dispositivo en el que se visualice (es responsive). Ventajas: maquetar columnas es facil, se integra muy bien con las principales librerías JS, etc.
+
+Como instalar BOOTSTRAP:
+
+1 - Utilizar CDN (enlace directo)
+2 - Descargar archivos compilados.
+3 - Compilar archivos.
+4 - Instalar paquetes.
+
+(Debemos tener en cuenta que el css se llama en el head y los script se ponen antes de cerrar /body)
+
+TIPOGRAFIA:
+
+Todos los tags de h1 a h6 están estilados por bootstrap. Tambien se puede utilizar el tag smanll para mostrar un texto secundario(lo muestra en color mas clarito)
+Otro ejemplo de estilo de texto puede ser para destacar un parrafo usando la clase "lead". 
+
+
+CONTENEDORES:
+
+Cada contenedor tiene un ancho variable que va a depender de la resolución de pantalla del usuario, Esto lo averiguará Bootstrap.
+Fluid: El ancho será siempre de 100% brindandonos la posibilidad de renderizar div full width
+ROW: Serán las filas en donde dividiremos el contenido del bloque, que reacomodará los divs de su anterior dependiendo siemrpe de la resolución del usuario.
+
+SISTEMA DE GRILLAS:
+
+LLa grilla se divide en 12 columnas, que varían su ancho dependiendo de la resolución del usuario móvil, o de escritorio.
+Estas columnas se ubican siempre dentro de una fila, el div .row mencionado anteriormente.
+Se representa como col-md-x que indica que el div ocupará X columnas en un .container
+
+Si quisiéramos que el mismo div ocupe 6 columnas en un dispositivo de 480px de ancho, deberíamos aplicarle dos clases, para indicarle un comportamiento para cada resolución (.col-xs-, .col-sm-, .col-md-, .col-lg-).
+Esto quiere decir que puedes nombrar un div con dos clases diferentes, que proporcionarán distintos estilos al mismo elemento. Eso no será una preocupación, ya que sólo se cargarán los estilos que correspondan según el dispositivo que está renderizando la página en ese momento.
+
+si buscamos "background" en el buscador de la web de bootstrap te van a aparecer todas las clases con los colores de fondos.
+
+TABLAS FORMULARIOS e IMAGENES:
+
+
+
+
+
+
+
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../css/bootstrap.min.css">
+     <title>Bootstrap</title>
+ </head>
+ <body>
+    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi atque ex libero voluptatum doloremque deserunt ratione quo nostrum vitae eligendi, maiores odit distinctio animi enim ipsam adipisci est quaerat exercitationem.</p>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <br><br>
+
+
+      <div class="container">
+        <div class="row bg-dark">
+          <div class="col bg-light col-sm-12 col-md-6 col-lg-4">
+            Column
+          </div>
+          <div class="col bg-light col-sm-12 col-lg-8">
+            Column
+          </div>
+          <div class="col bg-light col-sm-12">
+            Column
+          </div>
+        </div>
+      </div>
+
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <!-- FORMULARIO -->
+      <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <label for="inputPassword6" class="col-form-label">Password</label>
+        </div>
+        <div class="col-auto">
+          <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+        </div>
+        <div class="col-auto">
+          <span id="passwordHelpInline" class="form-text">
+            Must be 8-20 characters long.
+          </span>
+        </div>
+      </div>
+
+
+      <!-- IMAGENES -->
+<div class="text-center">
+    <img src="../assets/606024.jpg" class="rounded" alt="...">
+  </div>
+    
+ </body>
+ </html>
