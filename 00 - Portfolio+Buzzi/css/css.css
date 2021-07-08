@@ -39,10 +39,6 @@ div.infoSobreNosotros {
     background-color: whitesmoke;
 }
 
-h2{
-    color: blueviolet;
-}
-
 th {
     font-weight: 900;
 }
@@ -101,16 +97,83 @@ section .presEquipo div{
     font-weight: 300;
 }
 
-.equipoGrid {
-    font-size: 30px;
-display: grid;
-background-color: beige;
-grid-template-columns: 100px 100px 100px;
+.logoHeader{
+    width: 100px;
+    height: 100px;
 }
 
-.equipoGrid > *{
-    background-color: brown;
-    border: 1px solid black;
+.contenedorGrid {
+    display: grid;
+    grid-template-columns: auto 6.5 auto;
+    grid-template-rows: 6.5rem 29rem auto;
+    gap: 10px;
+}
+
+.contenedorGrid > *{
+    _background-color: brown;
+    _border: 1px solid black;
     text-align: center;
-    color: white;
+    }
+
+    .headerNav {
+        grid-column: 1 / 1;
+
+    }
+    .headerLogo {
+        grid-column: 2 / 2;
+
+    }
+    .headerRRSS {
+        grid-column: 3 / 3;
+
+    }
+
+    .footer {
+        grid-column: 1 / 4;
+        background-color: ;
+    }
+    
+    .main{
+        grid-column: 1 / 3;
+    }
+    .aside {
+        border: 1px solid black;
+        grid-column: 3 / 3;
+    }
+
+    @media all and (max-width: 480px){
+        .contenedorGrid {
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 6.5rem 1.8rem 13rem auto auto;
+        }
+        .headerNav {
+            grid-column: 1 / 1;
+    
+        }
+        .headerLogo {
+            grid-column: 2 / 2;
+    
+        }
+        .headerRRSS {
+            grid-column: 1 / 3;
+    
+        }
+    
+        .footer {
+            grid-column: 1 / 3;
+        }
+        
+        .main{
+            grid-column: 1 / 3;  
+        }
+        .aside {
+            grid-column: 1 / span 2;
+        }
+        .menuNav{
+            display: flex;
+            flex-direction: column;
+            justify-content:left;
+            align-items: center;
+        }
+    
     }
