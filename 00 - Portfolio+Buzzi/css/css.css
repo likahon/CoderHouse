@@ -2,22 +2,39 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body{
 
+body{
     height: 100vh;
+    background-color: black;
+    background-image: url(../assets/fondo2.jpg);
+    background-size: cover;
+}
+
+
+.headerNav, .headerLogo, .headerRRSS{
+    background-color: hsla(0, 0%, 0%, 0.699);
+    color: #f0f0f0;
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: #f0f0f0;
 }
 
 .menuNav{
     display: flex;
     flex-direction: row;
-    justify-content:left;
+    justify-content:end;
     align-items: center;
-    
+    margin: 0px;
+    padding-left: 10px;
+}
+
+.headerNav{
+    display: flex;
+    flex-direction: row;
+    justify-content:end;
+    align-items: flex-end;
 }
 
 .menuNav li:hover{
@@ -34,17 +51,13 @@ ul.menuNav li {
     font-size: 14px;
     text-align: left;
     font-weight: 900;
-    color: black;
-    display: inline;
-    border: solid 1px;
-    border-radius: 3px;
     margin: 10px;
     padding: 5px;
 }
 
 div.infoSobreNosotros {
     text-align: center;
-    background-color: whitesmoke;
+    background-color: #f0f0f0;
 }
 
 th {
@@ -58,23 +71,46 @@ th {
 .benSitio{
     font-weight: 900;
 }
-body{
-    _background-image: url(../assets/fondo1.jpg);
-    _filter:blur();
-}
-
 form {
-    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f0f0f0;
+    font-size: 1em;
     font-weight: 900;
 }
+
 tr{
-    background-color: whitesmoke;
+    background-color: #f0f0f0;
 }
 
 .presEquipo{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    color: #f0f0f0;
+}
+
+.portfolio{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #f0f0f0;
+}
+
+section .portfolio div{
+    padding: 3px;
+    display: block;
+    margin: 100px;
+    width: 250px;
+    height: 300px;
+    border: solid 1px #f0f0f0;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -84,21 +120,22 @@ section .presEquipo div{
     margin: 100px;
     width: 250px;
     height: 300px;
-    border: solid 1px black;
+    border: solid 1px #f0f0f0;
+    border-radius: 5px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-section .presEquipo img{
-    
-}
-
 .footContacto{
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+footer{
+    position: relative;
 }
 
 .zocalo{
@@ -119,9 +156,28 @@ section .presEquipo img{
 
 .contenedorGrid {
     display: grid;
-    grid-template-columns: auto 6.5 auto;
-    grid-template-rows: 6.5rem 29rem auto;
-    gap: 10px;
+    grid-template-columns: auto 7rem auto;
+    grid-template-rows: 6.5rem 29rem 2em;
+    row-gap: 10px;
+}
+
+.main{
+    color: #f0f0f0;
+}
+
+.nombreTit{
+    text-align: left;
+    font-size: 5em;
+    margin-bottom: 0px;
+    margin-left: 0.5em;
+}
+
+.apellTit{
+    text-align: center;
+    font-size: 5em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 3em;
 }
 
 .contenedorGrid > *{
@@ -149,15 +205,19 @@ section .presEquipo img{
 
     footer {
         grid-column: 1 / 4;
-        background: linear-gradient(to top, rgba(225, 0, 255, 0.582), rgba(183, 0, 255, 0.24));
+        color: #f0f0f0;
+        background-color: hsla(0, 0%, 0%, 0.699);
     }
     
     .main{
         grid-column: 1 / 3;
     }
     .aside {
-        border: 1px solid black;
         grid-column: 3 / 3;
+        display: flex;
+        align-items: center;
+        color: #f0f0f0;
+        
     }
 
     @media all and (max-width: 480px){
