@@ -20,6 +20,78 @@ div{
   background-color: $colorbg;
 }
 
+Operadores:
+
+$widtH1: 400px;
+$width2: widtH1 + 80px;
+
+
+NESTING o ANIDACIÓN:
+
+HTML sigue una estricta estructura de anidación, mientras que CSS, por lo general, es un caos total. 
+Con la anidación de SASS, puedes organizar tu hoja de estilo de una manera que se asemeja a la de HTML, lo que reduce la posibilidad de conflictos en el CSS.
+
+Ejemplo:
+
+ul {
+ list-style: none;
+ 	 li {
+   		padding: 15px;
+   		display: inline-block;
+  	       a {
+    		     text-decoration: none;
+   	                 font-size: 16px;
+    		     color: #444;
+   	      }
+             }
+}
+
+
+SASS Permite editar por propiedad en los anidados, por ejemplo:
+a{
+  text:{
+    decoration:none;
+    transform: uppercase;
+    align:center;
+  }
+}
+
+
+IMPORT:
+
+SASS permite separar las hojas de estilo en archivos separados. A cotninuación se puede usar @import para incluir la fuente de los archivos individuales en una hoja de estilo maestra.
+
+Ejemplo: quieres tener por separado los estilos donde nos enfocamos en la estructura, colores, tipografía y grilla. ¡importante! el archivo debe tener “_” (guión bajo) al principio del nombre. Ej: _colores.scss.
+
+@import "estructura";
+@import "colores";
+@import "tipografia";
+@import "grilla";
+
+
+BEM:
+
+Metodología para nombrar clases. BEM significa Modificador de Bloques de Elementos (Block Element Modifier) por sus siglas en inglés. Sugiere una manera estructurada de nombrar tus clases, basada en las propiedades del elemento en cuestión. 
+BEM tiene como horizonte modularizar lo máximo posible cada uno de los bloques de código dispuesto. Se centra en tres parámetros o variables posibles: bloques (div, section, article, ul, ol, etc.), elementos (a, button, li, span, etc.) y modificadores. Estos últimos se definen de acuerdo a la posterior utilización que haga el desarrollador a cargo.
+
+Bloque: El bloque de elementos forma la raíz de la clase y siempre irá primero. Solo debes saber que una vez que has definido tu bloque, estarás listo para comenzar a nombrar tus elementos. 
+
+Ejemplo:
+.block__element {
+    background-color: #FFFFFF;
+}
+
+La doble barra baja te permite visualizar, navegar rápidamente y manipular tu código. Aquí hay algunos ejemplos de cómo funciona la metodología de elementos:
+
+
+.header__logo {}
+.header__tagline {}
+.header__searchbar {}
+.header__navigation {}
+
+
+
+
 
  -->
 
