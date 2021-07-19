@@ -1,0 +1,209 @@
+<!-- 
+
+SASS II:
+Operaciones:
+
+Permite hacer suma, resta, multiplicacion y división de las variables. Ejemplo:
+
+$ancho: 720px;
+
+.box_uno{
+  width: $ancho/2;
+}
+
+.box_dos{
+  width: ($ancho/2)-50;
+}
+
+Condicionales:
+Permiten establecer reglas para validar si se aplica o no una acción, cambio o asignación en el atributo de un elemento. Estas condiciones podrán incluir comparadores típicos (==, !=, <, >) entre variables, constantes o cualquier expresión intermedia. 
+
+El condicional mas usado es IF. Ejemplo:
+
+$animal: gato; /* Mi constante */
+p {
+      @if $animal == gato {
+             color: blue;
+      } @else if $animal == perro {
+                 color: red;
+     } @else if $animal == caballo {
+                color: green;
+     } @else {
+                color: black;
+      }
+}
+
+
+Bucles:
+Es una secuencia que se repite más de una vez, cuando la misma deja de cumplirse, finaliza.
+
+El bucle más utilizado es el For (sintaxis: @for $var from  [to|through]). Ejemplo:
+
+SASS:
+@for $i from 1 through 3 {
+  .casitodos-#{$i} { width: 2em * $i; }
+}
+
+
+CSS: 
+.casitodos-1 {
+   width: 2em;
+}
+
+.casitodos-2 {
+   width: 4em;
+}
+
+.casitodos-3 {
+   width: 6em;
+}
+
+
+EACH:
+
+La regla @each facilita la emisión de estilos, o la evaluación del código para cada elemento de una lista, o cada par en un mapa. Es ideal para estilos repetitivos que sólo tienen algunas variaciones entre ellos ya que, de cumplirse un característica, realiza dicha acción. Nos deja hacer variaciones en las listas sin necesidad de repetir código. Sintaxis: @each $var in.
+
+Ejemplo:
+
+
+
+SASS:
+
+@each $animal in puma, sea-slug, egret {
+   .#{$animal}-icon { 
+         Background-image:  
+          url('/images/#{$animal}.png'); (lo que hace {$animal} es variar el nombre del archivo png para que se cargue la imagen según lo que seleccionemos).
+    }
+} /*animal tendrá los valores de cada uno */
+
+
+
+CSS:
+
+.puma-icon {
+   background-image: url("/images/puma.png");
+}
+
+.sea-slug-icon {
+   background-image: url("/images/sea-slug.png");
+}
+
+.egret-icon {
+   background-image: url("/images/egret.png");
+}
+
+
+MAPS:
+
+Son variables cuyo valor es una coleccion de variables. Se definen con un nombre que los identifica. Las claves suelen ser cadenas o números, mientras que los valores pueden ser cualquier tipo de dato. Ejemplo: suponte que se necesita crear una serie de botones para compartir contenido y te exigen tres de diferente color. Para no crearlos uno a uno, generas un mapa  con clave “el botón” y valor “el color que tendrá”. Sintaxis: $map: (key1: value1, key2: value2, key3: value3);
+
+Ejemplo:
+
+SASS:
+
+$redes: ( /*Declaramos nuestro mapa*/
+        twitter: #55acee,
+        facebook:  #3a5795,
+        send-mail: #C25E30
+); 
+/*Creamos el bucle para usar los valores del mapa*/
+@each $red, $color in $redes {
+   .btn--#{$red} {
+       background-color: $color;
+   }
+}
+
+
+CSS:
+
+.btn--twitter {
+   background-color: #55acee;
+}
+
+.btn--facebook {
+   background-color: #3a5795;
+}
+
+.btn--send-mail {
+   background-color: #C25E30;
+}
+
+
+
+EXTEND:
+Extiende algo que ya armamos. A menudo, al diseñar una página una clase debe tener todos los estilos de otra clase, así como sus propios estilos específicos. En esos casos usamos @extend, para traer los estilos de otra clase. 
+
+Por ejemplo, la metodología BEM fomenta las clases modificadoras que van en los mismos elementos que las clases de bloque o elemento.  Pero esto puede crear HTML desordenado, es propenso a errores al olvidar incluir ambas clases, y puede traer problemas de estilo no semántico a su marcado.
+
+HTML:
+<div class="redsocial redsocial--nueva">
+  ¡Esta es una nueva red social!
+</div>
+
+SASS:
+.redsocial {
+        border: 1px #f00;
+        background-color: #fdd;
+}
+.redsocial--nueva {
+        @extend .redsocial;
+        border-width: 3px;
+}
+
+CSS:
+.redsocial, .redsocial--nueva {
+  border: 1px #f00;
+  background-color: #fdd;
+}
+.redsocial--nueva {
+  border-width: 3px;
+}
+
+MIXINGS:
+Permiten definir estilos que permiten ser reutilizados, Una de las mayores diferencias con los Extend, es que los Mixins pueden recibir argumentos, los cuales nos permitirán producir una gran variedad de estilos con unas simples líneas. 
+Ya tenemos un poco más claro cuales son las diferencias entre estas importantes características de SASS. Recuerden que utilizaremos: 
+Extends para compartir fragmentos de estilos idénticos entre componentes. 
+Mixins para reutilizar fragmentos de estilos que puedan tener un resultado diferente en cada lugar donde los declaremos.
+
+Ejemplo:
+
+SASS:
+@mixin sizes($width, $height) {
+   height: $height;
+   width: $width;
+}
+.box {
+   @include sizes(500px, 50px);
+}
+
+
+CSS:
+.box {
+      height: 50px;
+      width: 500px;
+}
+
+
+
+ -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/css.css">
+  <title>SASS I</title>
+
+</head>
+
+<body>
+
+
+</body>
+
+</html>
