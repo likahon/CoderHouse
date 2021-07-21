@@ -1,0 +1,38 @@
+$colAzul: blue;
+$colBordo: rgb(136, 0, 0);
+$height: 100px;
+
+body{
+    height: 100vh;
+    background-size: cover;
+}
+
+.contenedor__padre{
+    display: flex;
+    justify-content: center;
+}
+
+.header__prueba{
+    height: 10em;
+    background-color: beige;
+    
+}
+
+.bloque__prueba{
+    height: $height;
+    width: 100px;
+    margin: 0;
+    background-color: $colAzul;
+}
+
+.aside__prueba{
+    height: $height;
+    width: 100px;
+    margin: 0;
+    background-color: $colBordo;
+}
+
+.footer__prueba{
+    height: $height;
+    background-color: beige;
+}
