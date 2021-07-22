@@ -162,7 +162,7 @@ footer{
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     background-color: white;
     max-width: 90em;
@@ -181,7 +181,7 @@ footer{
 }
 
 .titErr404{
-    color: rgb(12, 12, 12);
+    color: rgb(77, 77, 77);
     font-size: 70px;
     font-weight: 800;
     display: flex;
