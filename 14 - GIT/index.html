@@ -1,0 +1,255 @@
+<!-- 
+GIT:
+
+Git es un sistema de control de versiones gratuito y de código abierto, diseñado para manejar desde pequeños a grandes proyectos de manera rápida y eficaz. Se entiende como control de versiones a todas las herramientas que nos permiten hacer modificaciones en nuestro proyecto. Este sistema registra los cambios realizados sobre un archivo o conjunto de archivos a lo largo del tiempo.
+
+
+VERIFICAR VERSIÓN DE GIT:
+
+john@MyShopSolutions: ~$ git --version
+git version 2.17.1
+john@MyShopSolutions: ~$
+
+
+
+CONFIGURAR GIT POR PRIMERA VEZ:
+
+
+Tu identidad
+
+Lo primero que deberías hacer cuando instalas Git es establecer tu nombre de usuario y dirección de correo electrónico. Esto es importante porque las confirmaciones de cambios (commits) en Git usan esta información, y es introducida de manera inmutable en los commits que envías.
+/* Paso 2*/
+john@MyShopSolutions: ~$ git config --global user.name "John Doe"
+/* Paso 3*/
+john@MyShopSolutions:~$ git config --global user.email johndoe@example.com
+
+
+COMPROBANDO CONFIGURACIÓN:
+john@MyShopSolutions: ~$ git config --list
+/* Se puede ver el usuario, el email y otros parámetros que dependerán de cada sistema operativo */
+user.name=John Doe
+user.email=johndoe@example.com
+color.status=auto
+color.branch=auto
+color.interactive=auto
+color.diff=auto
+
+Puedes también comprobar qué valor tiene la clave nombre en Git ejecutando: git config user.name
+
+john@MyShopSolutions: ~$ git config user.name
+John Doe
+
+
+OBTENIENDO AYUDA:
+/*Los tres comandos que disparan la ayuda de Git*/
+john@MyShopSolutions: ~$ git help config 
+john@MyShopSolutions: ~$ git config --help
+john@MyShopSolutions: ~$ man git-config 
+
+
+
+COMANDOS BÁSICOS DE LA CONSOLA:
+/?: si quieres saber más de un comando, añade /? para ver la ayuda relacionada. Te será muy útil para ver las muchas opciones de cada comando.
+HELP: te mostrará una lista de comandos disponibles.
+DIR: es el comando más conocido de DOS y sirve para ver el contenido de una carpeta (en MAC-OS usar LS).
+CD: sirve para entrar en una carpeta o salir de ella (CD…).
+CLEAR: limpia la consola.
+MKDIR: con este comando crearás una carpeta nueva. Con RMDIR podrás eliminarla.
+MOVE y COPY: son los comandos para mover y copiar archivos respectivamente. Deberás indicar el nombre del archivo con su ruta (si está en otra carpeta en la que te encuentras) y la ruta de destino.
+RENAME: sirve para renombrar un archivo o carpeta. Hay que indicar el nombre original y el definitivo.
+DEL: es el comando para eliminar un archivo. Recuerda que no irá a la Papelera, así que piensa muy bien antes de borrar algo. Y para eliminar carpeta usa el comando RD (en MAC-OS usar RM para archivos / para eliminar carpetas RM -RF).
+EXIT: cierra la ventana de la línea de comandos o símbolo del sistema.
+COPY CON: crear archivos (en MAC-OS usar TOUCH).
+
+
+CREAR REPOSITORIOS:
+Un repositorio es un espacio centralizado donde se almacena, organiza, mantiene y difunde información. 
+
+Será “la carpeta” o espacio donde guardarás tu proyecto, para más adelante compartirlo con el equipo a través de un repositorio en la nube (en internet, por ejemplo en Github).
+
+GIT INIT: 
+Este comando se usa para crear un nuevo repositorio en Git. Nos crea un repositorio de manera local y lo hará en la carpeta donde estamos posicionados. También se le puede pasar [nombre_de_la_carpeta] y creará una con ese nombre. Por ejemplo:
+/* Paso 1: Me ubico en la carpeta donde quiero crear mi proyecto */
+john@MyShopSolutions :~$ cd Documents/Proyectos_Coder/
+/* Paso 2: Ya dentro de la carpeta inicio el proyecto con el nombre que le asigne a mi repositorio*/
+john@MyShopSolutions :~/Documents/Proyectos_Coder/$ git init mi_repositorio
+/* Arrojará el siguiente mensaje */
+Initialized empty Git repository in /home/usuario/Documents/Proyectos_Coder/mi_repositorio/.git/
+/* Paso 3: Comprobamos que el repositorio se creó */
+john@MyShopSolutions :~/Documents/Proyectos_Coder/$ dir
+mi_repositorio
+/* Paso 4: Me ubico en mi repositorio */
+john@MyShopSolutions :~/Documents/Proyectos_Coder/$ cd mi_repositorio
+john@MyShopSolutions :~/Documents/Proyectos_Coder/mi_repositorio$ 
+
+
+GIT STATUS:
+Ya hemos visto cómo inicializar un repositorio localmente utilizando git init. Ahora nos toca crear los archivos que vamos a usar en este repositorio.
+Vamos a Sublime Text:
+
+1 Buscamos el repositorio creado
+2. Creamos un archivo index.html que se guardará en el repositorio
+3. Vamos a la terminal y con git status chequeamos el estado de nuestro repositorio
+john@MyShopSolutions :~/Documents/Proyectos_Coder/mi_repositorio$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+GIT ADD:
+Ahora se necesita agregar el o los archivos al Staging Area. En nuestro caso, para el index.html vamos a usar el comando git add + el nombre del archivo, lo cual permite adherir el archivo para subirlo luego al repositorio. También se puede usar git add . que adhiere todos los archivos nuevos.
+Para verificar si funciono, nuevamente utilizamos git status.
+john@MyShopSolutions :~/Documents/Proyectos_Coder/mi_repositorio$ git add index.html
+john@MyShopSolutions :~/Documents/Proyectos_Coder/mi_repositorio$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   index.html
+
+GIT COMMIT:
+Una vez que nuestros archivos están en el Staging Area debemos pasarlos a nuestro repositorio local y para eso debemos usar el git commit, que es el comando que nos va a permitir comprometer nuestros archivos.
+Es decir, que lo subirá al repositorio que se ha creado. El comando es el siguiente: 
+git commit -m “Comentario de qué se trata el commit que se está realizando”
+john@MyShopSolutions :~/Documents/Proyectos_Coder/mi_repositorio$ git commit -m "Primer archivo del repositorio"
+/* Esta sería el resultado del comando */
+[master (root-commit) 1734915] nuevo archivo
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+GIT LOG:
+/* Con git log podemos ver los logs (historial) de lo que ha pasado en el repositorio */
+john@MyShopSolutions :~/Documents/Proyectos_Coder/mi_repositorio$ git log
+commit 1734915470ce9983f703b77807a68e42166b47dd (HEAD -> master)
+Author: John Doe <johndoe@example.com>
+Date:   Sat May 22 18:53:24 2020 -0300
+
+    Primer archivo del repositorio
+
+
+
+    RAMAS:
+
+Cuando quieres añadir una nueva función o solucionar un error (sin importar su tamaño), generas una nueva rama para alojar estos cambios. 
+
+Esto te da la oportunidad de organizarte mejor con los cambios o correcciones experimentales.
+
+Podemos crear una rama escribiendo
+“git branch mi-rama”.
+
+GIT BRANCH Creando ramas:
+/* Paso 1: Verifico en cuál rama estoy */
+john@MyShopSolutions :~/Documents/Proyectos_Coder/mi_repositorio$ git branch
+*master
+/* Paso 2. Creo la rama que voy a usar para el cambio */
+john@MyShopSolutions :~/Documents/Proyectos_Coder/mi_repositorio$  git branch mi_rama
+/* Paso 3: Verifico que se creó la rama */
+john@MyShopSolutions :~/Documents/Proyectos_Coder/mi_repositorio$ git branch -l
+*master
+mi_rama
+john@MyShopSolutions :~/Documents/Proyectos_Coder/mi_repositorio$
+
+GIT BRANCH MOVERNOS ENTRE RAMAS:
+/* Para moverme a la rama que cree uso el comando de git checkout */
+john@MyShopSolutions :~/Documents/Proyectos_Coder/mi_repositorio$ git checkout mi_rama
+Switched to branch 'mi_rama'
+/* Verifico nuevamente que me movi de rama */
+john@MyShopSolutions :~/Documents/Proyectos_Coder/mi_repositorio$ git branch -l
+master
+*mi_rama
+john@MyShopSolutions :~/Documents/Proyectos_Coder/mi_repositorio$
+
+GIT BRANCH -D - BORRANDO RAMAS:
+
+/* Paso 1: Me muevo a la rama principal “master” */
+john@MyShopSolutions :~/Documents/Proyectos_Coder/mi_repositorio$ git checkout master
+/* Paso 2: Verificar que se está en la rama de master */
+john@MyShopSolutions :~/Documents/Proyectos_Coder/mi_repositorio$ git branch
+*master
+mi_rama
+/* Paso 3: Procedo a borrar la rama que ya no voy a usar */
+john@MyShopSolutions :~/Documents/Proyectos_Coder/mi_repositorio$ git branch -D mi_rama
+Deleted branch mi_rama (was 6d6c28c)
+/* Paso 4: Verificar que se borró la rama*/
+john@MyShopSolutions :~/Documents/Proyectos_Coder/mi_repositorio$ git branch
+*master
+
+GIT CHECKOUT:
+Así como nos movemos entre ramas, nos podemos mover entre commits. Recuerden que al hacer cambios, adherirlos y comitearlos, se crea un historial de dichos cambios, los logs.
+
+La posibilidad de volver a un commit en específico es una ventaja de los controladores de versiones, que permiten volver a un estado anterior si se presenta un problema, error o cambio inesperado.
+
+/* Para ver los commits realizados, los listamos con el comando git log --oneline para verlos en una sola línea*/
+john@MyShopSolutions :~/Documents/Proyectos_Coder/mi_repositorio$ git log --oneline
+/* Se listan todos los cambios que se han realizado sobre el index.html */
+fc59b88 (HEAD -> nueva_rama) Ahora agregamos un título
+6bcff19 Agregar un texto al index.html
+41e6121 (master) Primer archivo del repositorio
+john@MyShopSolutions :~/Documents/Proyectos_Coder/mi_repositorio$ 
+
+GIT CHECKOUT MOVERNOS A UN COMMIT:
+/* Supongamos que me equivoqué en agregar el título, quiero volver al punto anterior del texto, busco el número de commit y muevo hacia ese punto */
+john@MyShopSolutions :~/Documents/Proyectos_Coder/mi_repositorio$ git checkout 6bcff19
+Note: checking out 6bcff19.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 6bcff19... Agregar un texto al index.html
+
+/* Si verifico donde estoy parado co git branch se puede observar que se está en el commit y el index.html ha cambiado*/
+john@MyShopSolutions :~/Documents/Proyectos_Coder/mi_repositorio$ git branch
+* (HEAD detached at 6bcff19)
+  master
+  nueva_rama
+john@MyShopSolutions :~/Documents/Proyectos_Coder/mi_repositorio$
+
+
+GIT MERGE:
+
+Una vez que tenemos una rama (o más), podemos experimentar características nuevas, y luego FUSIONARLAS con la rama MASTER.
+/* Paso 1: Ubicarse en la rama master, que es a donde quiero fusionar los cambios usando el comando de git checkout master. */
+john@MyShopSolutions :~/Documents/Proyectos_Coder/mi_repositorio$  git checkout master
+/* Paso 2: Verificar que estoy en master con git branch. Se puede observar en el archivo de index.html que no tiene ni título ni texto. */
+john@MyShopSolutions :~/Documents/Proyectos_Coder/mi_repositorio$  git branch
+*master
+Nueva_rama
+/* Paso 3: Realizar la fusión. Hacer el merge con el comando git merge nueva_rama*/
+john@MyShopSolutions :~/Documents/Proyectos_Coder/mi_repositorio$  git merge nueva_rama
+Updating 41e6121..fc59b88
+Fast-forward
+ index.html | 2 ++
+ 1 file changed, 2 insertions(+)
+
+
+RESUMEN:
+
+git init: indicarle que en ESE directorio, donde ejecutamos este comando, será usado con GIT.
+git add .: agregar todos los archivos creados, modificados, eliminados al estado 2 (stage)
+git commit -m “Mensaje”: mensaje obligatorio para indicar que hemos cambiado por ejemplo, al estado 3.
+Git log --online: para conocer los códigos de los commits realizados.
+Git checkout rama: para cambiar de rama o ir a un commit específico (debemos conocer su código anteriormente) 
+git merge rama: debemos estar en MASTER para fusionar.
+git branch rama: creación de una rama (si queremos eliminar una rama ponemos git branch -D nombre-rama)
+
+
+
+
+
+ -->
+
