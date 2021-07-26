@@ -203,7 +203,14 @@ footer{
         display: flex;
         align-items: center;
         color: #f0f0f0;
-        
+    }
+
+    .formContacto{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        color: #f0f0f0;
+        margin: 10% 0 10% 0;
     }
 
     @media all and (max-width: 480px){
