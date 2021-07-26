@@ -1,5 +1,7 @@
 *{
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -114,10 +116,26 @@ section .portfolio div{
     align-items: center;
 }
 
+.productCards{
+    display: flex;
+    flex-direction: row;
+}
+
+.productCardsDad{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.card{
+    margin: 10px;
+}
+
 .footContacto{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-content: center;
 }
 
 footer{
@@ -128,6 +146,7 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin: 35% 0 0 0;
 }
 
 .footContacto>h4 {

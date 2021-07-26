@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/css.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,71 +25,81 @@
         </ul>
     </header>
 
-    <section>
-        <h1>Nombres</h1>
-        <article>
+    <section class="productCardsDad">
+        <article class="productCards">
 
-            <h3>Tabla de trabajos</h3>
-    <table Border="1" Cellpadding="7">
-        <colgroup>
-        </colgroup>
-        <thead>
-            <tr>
-                <th>Tipo de Sitio</th>
-                <th>Descripción</th>
-                <th>Beneficios</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="tipoSitio">Landing</td>
-                <td>Una landing page página de inicio es la página web a la que se dirige a un usuario de Internet después de hacer clic en un hipervínculo ya sea que ese enlace sea una publicidad, un enlace en un correo electrónico o boletín, un botón de llamada a la acción u otros….</td>
-                <td>
-                    <ol>
-                        <li><span>Accesibilidad</span></li>
-                        <li><span>Efectividad</span></li>
-                        <li><span>Conversión</span></li>
-                    </ol>
-                </td>
-            </tr>
-            <tr>
-                <td class="tipoSitio">e-commerce</td>
-                <td>Plataforma web donde se comercializan productos o servicios. Actualmente son sitios con un gran tráfico, ya que muchos comercios tradicionales han diversificado sus canales.</td>
-                <td>
-                    <ol>
-                        <li><span>Optimización</span></li>
-                        <li><span>Venta de productos</span></li>
-                        <li><span>Ordenada</span></li>
-                    </ol>
-                </td>
-            </tr>
-            <tr>
-                <td class="tipoSitio">Blog</td>
-                <td>Sitio web donde se sube contenido, generalmente de un tema concreto. Puede utilizarse de manera personal o profesional. En otras palabras, sería como un cuaderno de bitácora digital.</td>
-                <td>
-                    <ol>
-                        <li><span>Fácil mantenimiento</span></li>
-                        <li><span>Personalizable</span></li>
-                        <li><span>Estructura flexible</span></li>
-                    </ol>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-           
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Landing</h5>
+                    <p class="card-text">Una landing page página de inicio es la página web a la que se dirige a un
+                        usuario de Internet después de hacer clic en un hipervínculo ya sea que ese enlace sea una
+                        publicidad, un enlace en un correo electrónico o boletín, un botón de llamada a la acción u
+                        otros….</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Accesibilidad</li>
+                    <li class="list-group-item">Efectividad</li>
+                    <li class="list-group-item">Conversión</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Ejemplo</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">e-commerce</h5>
+                    <p class="card-text">Plataforma web donde se comercializan productos o servicios. Actualmente son
+                        sitios con un gran tráfico, ya que muchos comercios tradicionales han diversificado sus canales.
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Optimización</li>
+                    <li class="list-group-item">Venta de productos</li>
+                    <li class="list-group-item">Ordenada</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Ejemplo</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Blog</h5>
+                    <p class="card-text">Sitio web donde se sube contenido, generalmente de un tema concreto. Puede
+                        utilizarse de manera personal o profesional. En otras palabras, sería como un cuaderno de
+                        bitácora digital.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Fácil mantenimiento</li>
+                    <li class="list-group-item">Personalizable</li>
+                    <li class="list-group-item">Estructura flexible</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Ejemplo</a>
+                </div>
+            </div>
+
         </article>
     </section>
 
     <footer>
 
-    </footer>
-    <footer>
-        <div class="footContacto">
-            <h4><strong>Dirección:</strong> Callefalsa 123, Ciudad de Buenos Aires</h4>
-            <h4><strong>Telefono:</strong> 5555-4444-333</h4>
-            <h4><strong>Horario de atención:</strong> de 8:00 a 17:00hs</h4>
+        <div>
+            <footer class="zocalo">
+                <div class="footContacto">
+                    <h4><strong>Dirección:</strong> Callefalsa 123, Ciudad de Buenos Aires</h4>
+                    <h4><strong>Telefono:</strong> 5555-4444-333</h4>
+                    <h4><strong>Horario de atención:</strong> de 8:00 a 17:00hs</h4>
+                </div>
+            </footer>
         </div>
-    </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
