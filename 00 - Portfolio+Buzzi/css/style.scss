@@ -1,6 +1,11 @@
 $colAzul: blue;
 $colBordo: rgb(136, 0, 0);
-$height: 100px;
+$alto: 100px;
+$ancho: 100px;
+$alto404: 200px;
+$ancho404: 200px;
+$tamanoFont: 35px;
+$fontWeight: 400;
 
 body{
     height: 100vh;
@@ -19,20 +24,60 @@ body{
 }
 
 .bloque__prueba{
-    height: $height;
+    height: $alto;
     width: 100px;
     margin: 0;
     background-color: $colAzul;
 }
 
 .aside__prueba{
-    height: $height;
+    height: $alto;
     width: 100px;
     margin: 0;
     background-color: $colBordo;
 }
 
 .footer__prueba{
-    height: $height;
+    height: $alto;
     background-color: beige;
+}
+
+.cheems404Sec{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    max-width: 90em;
+}
+
+.cheems404Ar{
+    height: $alto404*3;
+    display: flex;
+    justify-content: center;
+}
+
+.body404{
+    height: 100%;
+    background-color: white;
+    background-size: cover;
+}
+
+.titErr404{
+    color: rgb(77, 77, 77);
+    font-size: ($tamanoFont*2)+10px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.errPar{
+    max-width: 20px;
+}
+
+.mensaje404{
+    font-size: 30px;
+    font-weight: $fontWeight+100;
 }
