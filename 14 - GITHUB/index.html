@@ -1,0 +1,52 @@
+<!-- 
+GITHUB:
+
+Por ahora todo lo que venía ocurriendo en Git era de manera local, no necesitábamos nada de internet para guardar nuestros commits y nuestro repositorio. 
+Ahora queremos compartir nuestro trabajo con otros (compañeros de proyecto, clientes, etc), ¡para eso utilizamos Github!
+Github es una especie de “red social” de programadores. Con este sitio podemos subir nuestros proyectos y lograr que otras personas colaboren.
+
+GIT IGNORE: es un archivo que informa los archivos que no deben subirse.
+
+CREAR UN REPOSITORIO:
+
+Luego de hacer clic en el enlace de verificación, aparecerá una pantalla así, que indica que tu e-mail ha sido verificado, y permite que hagas tu primer repositorio.
+
+Por ejemplo, podría ser llamado “mi_repositorio”, para que pruebes con los archivos que trabajaste en el desafío de GIT.
+
+
+Elegimos “público” o “privado”. Si bien con privado limitamos el acceso a cualquier persona, no nos permitirá mostrar nuestro código como página web, por lo que elegimos “público”. Luego hacemos clic en “create repository”.
+
+
+SUBIR NUESTRO REPOSITORIO:
+
+Vamos a nuestra terminal, y nos ubicamos en el proyecto creado en la clase pasada. Copiaremos las siguientes líneas para realizar el “push” de los archivos a nuestro servidor en GitHub.
+/* Paso 1: me ubico en mi repositorio */
+john@MyShopSolutions :~$ cd Documents/Proyectos_Coder/mi_repositorio
+/* Paso 2: indico cuál será mi nuevo repositorio remoto */
+john@MyShopSolutions:~/Documents/Proyectos_Coder/mi_repositorio$ git remote add origin https://github.com/miuser/mi_repositorio.git
+
+/* Paso 3: Pusheamos todos nuestros archivos al repositorio de github*/
+john@MyShopSolutions:~/Documents/Proyectos_Coder/mi_repositorio$ git push -u origin master
+Username for 'https://github.com': miuser /* Pedirá el usuario de github */
+Password for 'https://isaine@github.com': /* Pedirá el la clave de github *//
+Counting objects: 9, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (9/9), 869 bytes | 217.00 KiB/s, done.
+Total 9 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/miuser/mi_repositorio.git
+ * [new branch]  	master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+
+MAS PROPIEDADES DE GITHUB:
+
+Como plataforma colaborativa, GitHub ofrece a sus usuarios una gran cantidad de funcionalidades para la gestión de proyectos, todas apoyadas por la comunidad. Por esta razón, a lo mejor dentro de un año tenga agregadas nuevas características que le permitan a los usuarios un mejor desenvolvimiento en el desarrollo de código.
+
+
+
+
+
+ -->
+
