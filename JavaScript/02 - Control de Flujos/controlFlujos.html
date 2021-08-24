@@ -1,0 +1,160 @@
+<!-- 
+CONDICIONALES: DEFINICIÓN
+
+el typeof nos indica que tipo de variable es (entero, booleano, string, etc).
+
+
+
+Cuando en programación hablamos de condicionales, hablamos de una estructura sintáctica que sirve para tomar una decisión a partir de una condición. 
+Si <condición> entonces <operación>
+
+
+ESTRUCTURA IF
+
+La estructura más utilizada en la mayoría de los lenguajes, y por ende también en JS, es la estructura if
+
+if (true){
+    console.log("vas a ver este mensaje");
+}
+
+Si la condición se cumple (es decir, si su valor es true) se ejecutan todas las instrucciones que se encuentran dentro de {...}. Si la condición no se cumple (es decir, si su valor es false) no se ejecuta ninguna instrucción contenida en {...} y el programa continúa ejecutando el resto de instrucciones del script.
+
+if (false){
+    console.log("no vas a ver este mensaje");
+}
+
+EJEMPLO DE CONDICIONALES
+
+let unNumero = 5
+
+// Con (unNumero == 5) comparamos si unNumero es igual a 5
+if (unNumero == 5){
+    console.log("vas a ver este mensaje");
+}
+
+// Con (unNumero == 6) comparamos si unNumero es igual a 6
+if (unNumero == 6){ 
+    console.log("no vas a ver este mensaje");
+}
+
+En este ejemplo, las comparaciones se realizan entre el valor de la variable unNumero y un valor numérico. 
+En el primer condicional, como los dos valores coinciden, la igualdad se cumple, y por lo tanto la condición es cierta; su valor es true, y se ejecutan las instrucciones contenidas en el bloque del if.
+En el segundo caso unNumero  no es igual a 6; su valor es false, y no se ejecutan las instrucciones contenidas en el bloque del if.
+La comparación del ejemplo anterior suele ser el origen de muchos errores de programación, al confundir los operadores == y =. Las comparaciones siempre se realizan con el operador ==, ya que el operador = solamente asigna valores.
+
+
+iF...ELSE
+
+En ocasiones, las decisiones que se deben realizar no son del tipo "si se cumple la condición, hazlo; si no se cumple, no hagas nada". Normalmente las condiciones suelen ser del tipo "si se cumple esta condición, hazlo; si no se cumple, haz esto otro".
+
+let unColor = "Rojo"
+
+// Con (unColor == "Rojo") comparamos si unColor es igual "Rojo"
+if (unColor == "Rojo"){
+    console.log("el color es Rojo");
+}else{
+//La instrucción se interpreta cuando unColor NO es "Rojo"
+    console.log("el color NO es Rojo");
+}
+
+EJEMPLO DE IF...ELSE
+
+
+let nombreUsuario = prompt("Ingresar nombre de usuario");
+
+if (nombreUsuario == "") {
+    alert("No ingresaste el nombre de usuario");
+}
+else {
+    alert("Nombre de usuario ingresado " + nombreUsuario);
+}
+
+
+CONDICIONES ANIDADAS IF..ELSE IF
+
+El ELSEIF recorre 1 x 1 hasta encontrar que se cumpla la condicion.
+
+let precio = 100.5;
+
+if (precio < 20) {
+    alert("El precio es menor que 20");
+}
+else if (precio < 50) {
+    alert("El precio es menor que 50");
+}
+else if (precio < 100) {
+    alert("El precio es menor que 100");
+}
+else {
+    alert("El precio es mayor que 100");
+}
+
+
+VARIABLES BOOLEAN
+
+TRUE o FALSE
+
+let esValida = true;
+let numero   = 10;
+let esMayor5 = (numero > 5); // su valor sera true
+
+if (esValida) {
+    alert("Es boolean true");
+}
+
+OPERADORES LÓGICOS
+
+OPERADORES EN JS
+
+En JavaScript, disponemos de los operadores lógicos habituales en lenguajes de programación como son: es igual, es distinto, menor, menor o igual, mayor, mayor o igual, and (y), or (o) y not (no). 
+La sintaxis se basa en símbolos, como veremos a continuación. Cabe destacar que hay que prestar atención a no confundir ‘==’ con ‘=’ porque implican distintas cosas.
+
+CONDICIONES COMPUESTA CON &&
+
+Ante una combinación de operadores && (AND) será requisito que todas las comparaciones sean verdadera para que la condición compuesta sea verdadera.
+
+let nombreIngresado   = prompt("Ingresar nombre");
+let apellidoIngresado = prompt("Ingresar apellido");
+
+if((nombreIngresado !="") && (apellidoIngresado !="")){
+    alert("Nombre: "+nombreIngresado +"\nApellido: "+apellidoIngresado); 
+}else{
+    alert("Error: Ingresar nombre y apellido");
+}
+
+ONDICIONES COMPUESTA CON  ||
+
+En caso de utilizar || (OR), será requisito que al menos una de las comparaciones sea verdadera para que la condición compuesta sea verdadera.
+
+let nombreIngresado   = prompt("Ingresar nombre");
+
+if((nombreIngresado == "ANA") || (nombreIngresado =="ana")){
+    alert("El nombre ingresado es Ana"); 
+}else{
+    alert("El nombre ingresado NO ES Ana"); 
+}
+
+
+COMBINACIÓN DE OPERADORES && y  ||
+
+let nombreIngresado   = prompt("Ingresar nombre");
+
+if((nombreIngresado !="") && ((nombreIngresado == "EMA") || (nombreIngresado =="ema"))){
+    alert("Hola Ema"); 
+}else{
+    alert("Error: Ingresar nombre valido");
+}
+
+COMBINACIÓN DE OPERADORES && y  ||
+
+Ya que las expresiones lógicas son evaluadas de izquierda a derecha, es necesario agrupar las operaciones para asegurar que se cumplan como uno lo desea:
+
+
+No es lo mismo:
+
+if((nombreIngresado !="") && ((nombreIngresado == "EMA") || (nombreIngresado =="ema"))){}
+if(((nombreIngresado !="") && (nombreIngresado == "EMA")) || (nombreIngresado =="ema")){}
+
+
+
+ -->
