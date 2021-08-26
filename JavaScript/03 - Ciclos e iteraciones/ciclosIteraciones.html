@@ -1,0 +1,217 @@
+<!-- 
+
+CICLOS / ITERACIONES
+
+CICLOS EN JAVASCRIPT
+
+Los ciclos, también conocidos como bucles o iteraciones son un medio rápido y sencillo para hacer algo repetidamente.
+Si tenemos que hacer alguna operación más de una vez en el programa, de forma consecutiva, usaremos las estructuras de bucles de JavaScript:  for, while o do..while.
+
+
+TIPOS DE BUCLES
+
+CICLOS POR CONTEO
+Repiten un bloque de código un número de veces específica. Estructura for. 
+
+CICLOS CONDICIONALES
+Repiten un bloque de código mientras la condición evaluada es verdadera. Estructuras while y do...while
+
+
+ESTRUCTURA FOR
+for(desde; hasta; actualización) {
+ … //lo que se escriba acá se ejecutará mientras dure el ciclo
+}
+
+El "desde" es la zona en la que se establecen los valores iniciales de las variables que controlan el ciclo.
+El "hasta" es el único elemento que decide si se repite o se detiene el ciclo.
+La "actualización" es el nuevo valor que se asigna después de cada repetición a las variables que controlan la repetición.
+
+
+EJEMPLO PRÁCTICO
+En el siguiente ejemplo utilizamos un for para contar de 0 a 9.
+
+for (let i = 0; i < 10; i++) {
+    alert(i);
+}
+
+Ahora usamos for para contar de 1 a 10.
+
+for (let i = 1; i <= 10; i++) {
+    alert(i);
+}
+
+EJEMPLO APLICADO FOR (1): TABLAS
+
+// Solicitamos un valor al usuario
+let ingresarNumero = parseInt(prompt("Ingresar Numero"));
+// En cada repetición, calculamos el número ingresado x el número de repetición (i)
+for (let i = 1; i <= 10; i++) {
+    let resultado = ingresarNumero * i ;
+    alert(ingresarNumero +" X "+ i +" = "+ resultado);
+}
+
+EJEMPLO APLICADO FOR (2): TURNOS
+
+Algoritmo para dar turno del 1 al 20 a los nombres ingresados
+
+for (let i = 1; i <= 20; i++) {
+    // En cada repetición solicitamos un nombre.
+    let ingresarNombre = prompt("Ingresar nombre");
+    // Informamos el turno asignado usando el número de repetición (i).
+    alert(" Turno  N° "+i+" Nombre: "+ingresarNombre);
+}
+
+
+SENTENCIA BREAK
+
+ veces, cuando escribimos una estructura for, necesitamos que bajo cierta condición el ciclo se interrumpa. Para eso se utiliza la sentencia break;
+Al escribir esa línea dentro de un ciclo for, el mismo se interrumpirá como si hubiera finalizado.
+
+for (let i = 1; i <= 10; i++) {
+    //Si la variable i es igual 5 interrumpo el for. 
+    if(i == 5){
+        break;
+    }
+    alert(i);
+}
+
+SENTENCIA CONTINUE
+
+A veces, cuando escribimos una estructura for, necesitamos que bajo cierta condición, el ciclo saltee esa repetición y siga con la próxima. Para eso se utiliza la sentencia continue;
+
+
+WHILE
+
+La estructura while permite crear bucles que se ejecutan ninguna o más veces, dependiendo de la condición indicada.
+El funcionamiento del bucle while se resume en: mientras se cumpla la condición indicada, repite indefinidamente las instrucciones incluidas dentro del bucle.
+
+
+Ejemplo de repetición infinita:
+
+let repetir = true;
+while(repetir){
+    console.log("Al infinito y...¡Más allá!");
+}
+
+
+EJEMPLO APLICADO WHILE: ESC
+
+Algoritmo que solicita una entrada al usuario hasta que ingresa “ESC”
+
+
+let entrada = prompt("Ingresar un dato");
+//Repetimos con While hasta que el usuario ingresa "ESC"
+while(entrada != "ESC" ){
+    alert("El usuario ingresó "+ entrada);
+    //Volvemos a solicitar un dato. En la próxima iteración se evalúa si no es ESC.
+    entrada = prompt("Ingresar otro dato");
+}
+
+
+DO...WHILE
+
+La estructura do..while permite crear bucles que se ejecutan una o más veces, dependiendo de la condición indicada.
+A diferencia de while, garantiza que el bloque de código se interpreta al menos una vez, porque la condición se evalúa al final.
+
+let repetir = false;
+do{
+console.log("¡Solo una vez!");
+}while(repetir)
+
+EJEMPLO APLICADO DO...WHILE: N°
+
+let numero = 0;
+do{
+   //Repetimos con do...while mientras el usuario ingresa un n°
+   numero = prompt("Ingresar Número");
+   console.log(numero);
+//Si el parseo no resulta un número se interrumpe el bucle.   
+}while(parseInt(numero));
+
+SWITCH
+
+La estructura switch  está especialmente diseñada para manejar de forma sencilla múltiples condiciones sobre la misma variable (técnicamente se podría resolver con un if, pero el uso de switch es más ordenado). Su definición formal puede parecer confusa, pero veamos un ejemplo para entender su simpleza.
+
+Cada condición se evalúa y si se cumple, se ejecuta lo que esté indicado adentro.
+
+
+Normalmente, después de las instrucciones de cada case se incluye la sentencia break para terminar la ejecución del switch, aunque no es obligatorio.
+
+¿Qué sucede si ningún valor de la variable del switch coincide con los valores definidos en los case? 
+
+En este caso, se utiliza el valor default para indicar las instrucciones que se ejecutan cuando ninguna condición anterior se cumplió.
+
+switch(numero) {
+ case 5:
+   ...
+   break;
+ case 8:
+   ...
+   break;
+ case 20:
+   ...
+   break;
+ default:
+   ...
+   break;
+}
+
+EJEMPLO APLICADO WHILE Y SWITCH: ENTRADAS
+
+Algoritmo que hace operación según la entrada. Pero ignorando la ejecución de bloque si la entrada en “ESC”
+
+let entrada = prompt("Ingresar un nombre");
+//Repetimos hasta que se ingresa "ESC"
+while(entrada != "ESC" ){
+   switch (entrada) {
+       case "ANA":
+            alert("HOLA ANA");
+            break;
+        case "JUAN":
+            alert("HOLA JUAN");
+            break;
+       default:
+           alert("¿QUIÉN SOS?")
+           break;
+   }
+   entrada = prompt("Ingresar un nombre");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Ciclos</title>
+ </head>
+ <body>
+
+
+<!-- <script src="/JavaScript/03 - Ciclos e iteraciones/for.js"></script> -->
+<!-- <script src="/JavaScript/03 - Ciclos e iteraciones/while.js"></script> -->
+<!-- <script src="/JavaScript/03 - Ciclos e iteraciones/doWhile.js"></script> -->
+<!-- <script src="/JavaScript/03 - Ciclos e iteraciones/doWhile.js"></script> -->
+<script src="/JavaScript/03 - Ciclos e iteraciones/switch.js"></script>
+
+
+     
+ </body>
+ </html>
