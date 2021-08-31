@@ -1,3 +1,15 @@
+/* LOS PARAMETROS QUE SE DECLAREN EN EL PARENTESIS DEL NOMBRE DE LA FUNCIÓN SOLAMENTE PODRAN UTILIZARSE DENTRO DE LA MISMA. EJEMPLO:
+
+
+function saludoEspecifico(nombre, apellido){
+    bla bla bla bla bla bla bla bla
+}
+
+let nombre = prompt("Ingrese el nombre");
+
+saludoEspecifico();
+*/
+
 /* let resultado = 0;
 
 
