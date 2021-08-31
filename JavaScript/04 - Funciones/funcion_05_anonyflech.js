@@ -7,6 +7,14 @@ console.log(suma(34, 56));
 console.log(resta(99, 80)); */
 
 
+/* FUNCION NORMAL */
+
+function saludos(){
+    console.log("Buenas noches!");
+    console.log("Bienvenidos al curso de JS!");
+}
+
+saludos();
 
 /* FUNCIONES FLECHA - SIN EL FUNCTION*/
 
