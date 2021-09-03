@@ -35,8 +35,8 @@ r2.contar();
 r2.contar();
 r2.contar();
 
-console.log('r1 ind: ${r1.obtenerCuentaIndividual()}');
-console.log('r1 glob: ${r1.obtenerCuentaGlobal()}');
+console.log(`r1 ind: ${r1.obtenerCuentaIndividual()}`);
+console.log(`r1 glob: ${r1.obtenerCuentaGlobal()}`);
 
-console.log('r2 ind: ${r1.obtenerCuentaIndividual()}');
-console.log('r2 glob: ${r1.obtenerCuentaGlobal()}');
+console.log(`r2 ind: ${r1.obtenerCuentaIndividual()}`);
+console.log(`r2 glob: ${r1.obtenerCuentaGlobal()}`);
