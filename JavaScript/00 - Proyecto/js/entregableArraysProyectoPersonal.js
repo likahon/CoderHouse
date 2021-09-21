@@ -40,3 +40,14 @@ for ( let i=0; i < arrayProductos.length; i++) {
 
 
 console.log(arrayCategoria);
+
+
+for (const componentes of arrayCategoria){
+    let contenedor = document.createElement("div");
+    contenedor.innerHTML = `<h3> ID: ${componentes.id} </h3>
+                            <p> Marca: ${componentes.marca} </p>
+                            <p> Modelo: ${componentes.modelo} </p>
+                            <b> Precio: ${componentes.precio} </b>`;
+
+document.body.appendChild(contenedor);
+}
