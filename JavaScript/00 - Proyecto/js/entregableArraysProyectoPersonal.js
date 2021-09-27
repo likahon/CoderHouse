@@ -53,8 +53,8 @@ document.body.appendChild(contenedor);
 }
 
 let cantidadCuotas = document.getElementById("cantCuotas");
-cantidadCuotas.addEventListener("click", calcularCuotas);
+cantidadCuotas.addEventListener("change", calcularCuotas);
 
 function calcularCuotas(cantidadCuotas){
-    console.log(arrayProductos.precio * cantidadCuotas);
+    console.log(arrayProductos[3].precio / cantidadCuotas.target.value);
 }
