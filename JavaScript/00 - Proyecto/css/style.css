@@ -12,6 +12,8 @@ body{
     width: 100%;
     height: 85px;
     background-color: #CA0257;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .card{
@@ -24,4 +26,12 @@ body{
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
+}
+
+.imgCarrito{
+    height: 45px;
+    margin-right: 15px;
+    display: flex;
+    align-self: center;
+    cursor: pointer;
 }
