@@ -1,43 +1,24 @@
-/* for (let i = 0; i < 10; i++) {
-    console.log(i);
-}
- */
 
 
-/* Tabla de Multiplicar */
-
-/* let numero = parseInt(prompt("Ingrese numero"));
-
-for(let i = 1; i <= 10; i++){
-    let producto = numero * i;
-    console.log(numero + " * " + i + " = " + producto);
-} */
+userIng = "Pepe";
+passIng = "pepa2";
 
 
-/* for(let i = 0; i < 3; i++){
-    let nombre = prompt("Ingrese nombre: ");
+for (let i = 0; i < 4; i++) {
 
-    if(nombre == "Sol"){
-        break
+    let user = prompt("Ingrese el usuario");
+    let password = prompt("Ingrese la contraseña");
+
+    if(user == userIng && password == passIng){
+
+        alert(`Bienvenido ${userIng}.`);
+        break;
+
+    }else{
+
+        alert(`Usuario y/o contrasena incorrectos`);
+
+        break;
     }
-
-    if(nombre == "Arturo"){
-        continue
-    }
-
-    console.log("El turno de " + nombre + " es el numero " + (i+1) + ".")
+    
 }
-console.log("END");
-
- */
-
-for(let i = 0; i < 100; i++){
-    let numero = parseInt(prompt("Ingrese el número"));
-
-    if(numero > 42){
-        console.log("Su número es mayor a 42");
-        break
-    }
-
-}
-console.log("Terminamos");

@@ -1,29 +1,35 @@
-/* let a = 5;
+let voto = prompt("Ingrese su voto");
+let votoA;
+let votoB;
 
-while(a < 10){
-    console.log("El valor de a es " + a);
-}
+while (voto != 'ESC') {
 
-console.log("END"); */
+    console.log(`Voto por: ${voto}.`)
 
-/* let dato = prompt("Ingrese dato: ");
+    voto = prompt("Ingrese su voto");
 
-while(dato != "esc"){
-    console.log("El usuario ingresó " + dato);
+    if(voto == 'A' || voto == 'a'){
 
-    dato = prompt("Ingrese dato: ");
-}
+        votoA = votoA + 1;
 
-console.log("END"); */
+    }else if(voto == 'B' || voto == 'b'){
 
+        votoB = votoB + 1;
 
-/* Tabla de Multiplicar */
-let numero = parseInt(prompt("Ingrese numero"));
+    }else{
 
-let i = 1;
+        console.log("Voto nulo");
 
-while(i <= 10){
-    let producto = numero * i;
-    console.log(numero + " * " + i + " = " + producto);
-    i++;
+    }
+
+    if(votoA > votoB){
+
+        console.log("Gano el A");
+
+    }else if(votoB > votoA){
+
+        console.log("Gano el B");
+
+    }
+
 }
