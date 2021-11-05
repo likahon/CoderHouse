@@ -1,10 +1,10 @@
-let numero = parseInt(prompt("ingrese un número"));
-let resultado = 0;
 
-while (numero != 0) {
+
+do{
     
-    numero = parseInt(prompt("ingrese un número"));
-    resultado = resultado + numero;
+    let numero = parseInt(prompt("ingrese un número"));
+    let resultado = resultado + numero;
     console.log(resultado);
-}
+
+}while (numero != 0)
 
