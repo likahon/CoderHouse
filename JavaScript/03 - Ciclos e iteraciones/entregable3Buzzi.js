@@ -1,9 +1,10 @@
-let cantidad = parseInt(prompt("Cuantas veces te saludaré?"));
+numero = parseInt(prompt("ingrese un número"));
+let resultado = 0;
 
-do{
-    console.log("HOLA");
-    cantidad = cantidad - 1;
+while (numero != 0) {
     
-    
-}while(cantidad != 0);
+    let numero = parseInt(prompt("ingrese un número"));
+    resultado = resultado + numero;
+    console.log(resultado);
+}
 
