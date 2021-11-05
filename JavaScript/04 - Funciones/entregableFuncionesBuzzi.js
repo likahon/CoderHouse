@@ -1,3 +1,6 @@
+// 2 - Calcular pagos en cuotas sobre un monto determinado.
+
+
 let precio = parseInt(prompt("Ingrese el precio del producto: "));
 let cantCuotas = parseInt(prompt("Ingrese la cantidad de cuotas."));
 
