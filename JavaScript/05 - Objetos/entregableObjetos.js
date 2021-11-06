@@ -1,4 +1,4 @@
-const auto1 = {
+let auto1 = {
     marca: "Chevrolet",
     modelo: "Cruze",
     anio:"2018",
