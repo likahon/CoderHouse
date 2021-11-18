@@ -89,5 +89,6 @@ let telefonoCliente = parseInt(prompt("Ingrese su número de teléfono"));
 //Guarda los datos almacenados en la clase registrarCliente
 arrayClientes.push(new registrarCliente(nombreApellido, dniCliente, edadCliente, paisCliente, provinciaCliente, localidadCliente, direccionCliente, codigoPostalCliente, telefonoCliente, montoPrestamo, cantCuotas, precioCuotas));
 
-registrarCliente.agradecerCliente();
+registrarCliente.agradecerCliente(); // NO PUEDO LLAMAR AL METODO DE LA CLASE.
+
 console.log(arrayClientes);
