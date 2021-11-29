@@ -8,30 +8,105 @@ body{
     height: 100vh;
 }
 
-.headerEcom{
+
+.headerPrincipal{
     width: 100%;
-    height: 85px;
-    background-color: #CA0257;
+    height: 90px;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+    _background-color: red;
+    position: absolute;
+    z-index: 2;
 }
 
-.card{
+.headerLogo{
+    width: 90px;
     position: relative;
+    margin: 30px 0px 0px 70px;
+}
+
+.navBar{
+    height: 90px;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 20px;
+    _background-color: blue;
+    margin: 30px 220px 0px 0px;
+}
+
+.comoFunciona:hover{
+    cursor: pointer;
+    color: rgb(70, 43, 226);
+}
+
+.contacto:hover{
+    cursor: pointer;
+    color: rgb(70, 43, 226);
+
+}
+
+.ingresar{
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    border: 3px solid white;
+    border-radius: 30px;
+
+}
+
+.ingresar:hover{
+    cursor: pointer;
+    color: rgb(70, 43, 226);
+    border: 3px solid rgb(70, 43, 226);
+
+}
+
+.imgHeader{
+    height: 50rem;
+    width: auto;
+   background-image: url(../assets/back2.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.degCont{
+    width: 100%;
+    height: 71.5%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.801) 5%, transparent 80%);
+    position:absolute;
+    flex-direction: column;
+    align-items: center;
+    z-index: 0;
+
+}
+
+.fatherCont{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    width: 20em;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: .25rem;
+    align-items: center;
+    z-index: 1;
 }
 
-.imgCarrito{
-    height: 45px;
-    margin-right: 15px;
+.row{
     display: flex;
-    align-self: center;
-    cursor: pointer;
+    flex-direction: column;
+    width: 500px;
+    justify-content: center;
+}
+
+.contForms{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    
 }
