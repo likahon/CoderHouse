@@ -68,6 +68,9 @@ function aceptaPrestamo() {
     let montoPrestamo = document.getElementById("montoIngresado").value;
     let cantCuotas = document.getElementById("cant_de_cuotas").value;
 
+    let precioTotal = montoPrestamo + calcularInteres(montoPrestamo, cantCuotas);
+    let precioCuotas = parseInt(precioTotal / cantCuotas);
+
     let planillaRegistro = document.getElementById("formClientes");
 
         planillaRegistro.innerHTML = `
@@ -105,8 +108,8 @@ function aceptaPrestamo() {
                 </div>
 
                 <div>
-                    <h3>Valor Total: ${montoPrestamo}</h3>
-                    <h3>Valor mensual a abonar: ${montoPrestamo / cantCuotas}</h3>
+                    <h3>Valor Total: ${precioTotal}</h3>
+                    <h3>Valor mensual a abonar: ${precioCuotas}</h3>
                 </div>
         
         `
@@ -115,7 +118,7 @@ function aceptaPrestamo() {
 function formCliente() {
 
     console.log("Usuario registrado");
-    
+
 }
 
 
@@ -127,9 +130,10 @@ function formCliente() {
 
 /* let cantCuotas = parseInt(prompt("ingrese la cantidad de cantCuotas: 1 - 3 - 6 - 12")); */
 
+
 //Variables que almacenan el precio total con intereses y que divide el mismo por la cant de cuotas seleccionadas
-let precioTotal = montoPrestamo + calcularInteres(montoPrestamo, cantCuotas);
-let precioCuotas = parseInt(precioTotal / cantCuotas);
+/* let precioTotal = montoPrestamo + calcularInteres(montoPrestamo, cantCuotas);
+let precioCuotas = parseInt(precioTotal / cantCuotas); */
 
 //Alerta que informa el valor total, la cant de cuotas y el monto por cuota
 /* alert(`Debera abonar $${precioTotal} o $${precioCuotas} en ${cantCuotas}`); */
@@ -155,6 +159,7 @@ let codigoPostalCliente = parseInt(prompt("Ingrese su código postal"));
 sessionStorage.setItem("cpDelCliente", codigoPostalCliente);
 let telefonoCliente = parseInt(prompt("Ingrese su número de teléfono"));
 sessionStorage.setItem("telefonoDelCliente", telefonoCliente); */
+
 
 //Guarda los datos almacenados en la clase registrarCliente
 arrayClientes.push(new registrarCliente(nombreApellido, dniCliente, edadCliente, paisCliente, provinciaCliente, localidadCliente, direccionCliente, codigoPostalCliente, telefonoCliente, montoPrestamo, cantCuotas, precioCuotas));
