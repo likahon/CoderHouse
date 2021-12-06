@@ -41,8 +41,8 @@ class registrarCliente{
 
 //Función que calcula el precio con intereses mediante switch
 function calcularInteres(montoPrestamo, cantCuotas){
-    
-    let interes;
+
+    let interes = 0;
 
         switch (cantCuotas) {
             case 3:
@@ -61,15 +61,22 @@ function calcularInteres(montoPrestamo, cantCuotas){
                 alert("Ingrese un montoPrestamo correcto");
                 break;
         }
+        console.log(typeof(cantCuotas));
 }
+
+
 
 function aceptaPrestamo() {
 
-    let montoPrestamo = document.getElementById("montoIngresado").value;
-    let cantCuotas = document.getElementById("cant_de_cuotas").value;
+    let montoPrestamo = parseInt(document.getElementById("montoIngresado").value);
+    let cantCuotas = parseInt(document.getElementById("cant_de_cuotas").value);
 
     let precioTotal = montoPrestamo + calcularInteres(montoPrestamo, cantCuotas);
     let precioCuotas = parseInt(precioTotal / cantCuotas);
+
+   /*  console.log(montoPrestamo);
+    console.log(cantCuotas);
+    console.log(precioCuotas); */
 
     let planillaRegistro = document.getElementById("formClientes");
 
