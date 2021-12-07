@@ -120,7 +120,6 @@ function aceptaPrestamo() {
 
 function formCliente() {
 
-
     let nombreApellido = document.getElementById("NombreYApellido").value;
     sessionStorage.setItem("NombreYApellido", nombreApellido);
 
@@ -153,13 +152,34 @@ function formCliente() {
     // Guarda los datos almacenados en la clase registrarCliente
     arrayClientes.push(new registrarCliente(nombreApellido, dniCliente, edadCliente, paisCliente, provinciaCliente, localidadCliente, direccionCliente, codigoPostalCliente, telefonoCliente, montoPrestamo, cantCuotas, precioCuotas));
 
-
     console.log("Usuario registrado");
 
 }
 
-let botonForm = document.getElementById("btnFormulario");
-botonForm.addEventListener("click", formCliente);
+function simularPrestamo() {
+
+    let montoPrestamo = parseInt(document.getElementById("montoIngresado").value);
+    let cantCuotas = parseInt(document.getElementById("cant_de_cuotas").value);
+
+    let precioTotal = montoPrestamo + calcularInteres(montoPrestamo, cantCuotas);
+    let precioCuotas = parseInt(precioTotal / cantCuotas);
+
+    let planillaRegistro = document.getElementById("formClientes");
+    planillaRegistro.innerHTML = `
+            <div class="row g-3">
+                    
+                <div>
+                    <h3>Valor Total: ${precioTotal}</h3>
+                    <h3>Valor mensual a abonar: ${precioCuotas}</h3>
+                </div>
+        
+        `
+
+    console.log(cantCuotas)
+}
+
+let simularUnPrestamo = document.getElementById("simularPrestamo");
+simularUnPrestamo.addEventListener("click", simularPrestamo);
 
 
 console.log(arrayClientes);
