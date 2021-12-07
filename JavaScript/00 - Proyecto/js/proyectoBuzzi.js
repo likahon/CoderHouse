@@ -6,16 +6,14 @@ let interesesPorCuotas = {
     doce: 2
 }
 
-/* let clientesAceptanPrestamo = [{"Roberto Ramirez", 18567543, 55, "Argentina", "Mendoza", "San Martin", "Calle Falsa 123", 1534, 65438765, 60000, 3, 20000}, {"Carlos Ramirez", 15567543, 55, "Argentina", "Catamarca", "San Carlos", "Calle Falsa 321", 6543, 12340987, 90000, 3, 30000}]; */
-
 //Array que almacena los datos de los clientes que aceptan la oferta realizada.
 let arrayClientes = [];
 
 //Clase que recolecta la info de los datos del cliente previamente a ser enviadas al array de clientes.
-class registrarCliente{
+class registrarCliente {
 
-    constructor(nombreApellido, dni, edad, pais, provincia, localidad, direccion, codigoPostal, telefono, montoPrestamo, cantCuotas, precioCuotas){
-    
+    constructor(nombreApellido, dni, edad, pais, provincia, localidad, direccion, codigoPostal, telefono, montoPrestamo, cantCuotas, precioCuotas) {
+
         this.nombreApellido = nombreApellido;
         this.dni = dni;
         this.edad = edad;
@@ -31,7 +29,7 @@ class registrarCliente{
 
     }
 
-    agradecerCliente(){
+    agradecerCliente() {
 
         alert(`${this.nombre}, su crédito está aprobado, gracias por confiar en nosotros`);
 
@@ -40,28 +38,28 @@ class registrarCliente{
 }
 
 //Función que calcula el precio con intereses mediante switch
-function calcularInteres(montoPrestamo, cantCuotas){
+function calcularInteres(montoPrestamo, cantCuotas) {
 
     let interes = 0;
 
-        switch (cantCuotas) {
-            case 3:
-                interes = montoPrestamo * interesesPorCuotas.tres;
-                return interes;
+    switch (cantCuotas) {
+        case 3:
+            interes = montoPrestamo * interesesPorCuotas.tres;
+            return interes;
 
-            case 6:
-                interes = montoPrestamo * interesesPorCuotas.seis;
-                return interes;
+        case 6:
+            interes = montoPrestamo * interesesPorCuotas.seis;
+            return interes;
 
-            case 12:
-                interes = montoPrestamo * interesesPorCuotas.doce;
-                return interes;
-        
-            default:
-                alert("Ingrese un montoPrestamo correcto");
-                break;
-        }
-        console.log(typeof(cantCuotas));
+        case 12:
+            interes = montoPrestamo * interesesPorCuotas.doce;
+            return interes;
+
+        default:
+            alert("Ingrese un montoPrestamo correcto");
+            break;
+    }
+    console.log(typeof(cantCuotas));
 }
 
 
@@ -74,45 +72,40 @@ function aceptaPrestamo() {
     let precioTotal = montoPrestamo + calcularInteres(montoPrestamo, cantCuotas);
     let precioCuotas = parseInt(precioTotal / cantCuotas);
 
-   /*  console.log(montoPrestamo);
-    console.log(cantCuotas);
-    console.log(precioCuotas); */
-
     let planillaRegistro = document.getElementById("formClientes");
-
-        planillaRegistro.innerHTML = `
+    planillaRegistro.innerHTML = `
             <div class="row g-3">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Nombre y Apellido" aria-label="Nombre y Apellido">
+                        <input type="text" class="form-control" placeholder="Nombre y Apellido" aria-label="Nombre y Apellido" id="NombreYApellido">
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="DNI" aria-label="DNI">
+                        <input type="text" class="form-control" placeholder="DNI" aria-label="DNI" id="dniCliente">
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Edad" aria-label="Edad">
+                        <input type="text" class="form-control" placeholder="Edad" aria-label="Edad" id="edadDelCliente">
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Pais" aria-label="Pais">
+                        <input type="text" class="form-control" placeholder="Pais" aria-label="Pais" id="paisDelCliente">
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Provincia" aria-label="Provincia">
+                        <input type="text" class="form-control" placeholder="Provincia" aria-label="Provincia" id="provinciaDelCliente">
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Localidad" aria-label="Localidad">
+                        <input type="text" class="form-control" placeholder="Localidad" aria-label="Localidad" id="localidadDelCliente">
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Dirección" aria-label="Direccion">
+                        <input type="text" class="form-control" placeholder="Dirección" aria-label="Direccion" id="direccionDelCliente">
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="C.P" aria-label="Last name">
+                        <input type="text" class="form-control" placeholder="C.P" aria-label="Last name" id="cpDelCliente">
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Teléfono" aria-label="Telefono">
+                        <input type="text" class="form-control" placeholder="Teléfono" aria-label="Telefono" id="telefonoDelCliente">
                     </div>
                     <div class="d-grid gap-2 col-6 mx-auto">
                         <button class="btn btn-primary" type="button"  onclick="formCliente()">Enviar formulario</button>
                     </div>
-                </div>
+                    
 
                 <div>
                     <h3>Valor Total: ${precioTotal}</h3>
@@ -120,57 +113,53 @@ function aceptaPrestamo() {
                 </div>
         
         `
+    return { montoPrestamo, cantCuotas, precioCuotas };
 }
 
+
+
 function formCliente() {
+
+
+    let nombreApellido = document.getElementById("NombreYApellido").value;
+    sessionStorage.setItem("NombreYApellido", nombreApellido);
+
+    let dniCliente = document.getElementById("dniCliente").value;
+    sessionStorage.setItem("dniDelCliente", dniCliente);
+
+    let edadCliente = parseInt(document.getElementById("edadDelCliente").value);
+    sessionStorage.setItem("edadDelCliente", edadCliente);
+
+    let paisCliente = document.getElementById("paisDelCliente").value;
+    sessionStorage.setItem("paisDelCliente", paisCliente);
+
+    let provinciaCliente = document.getElementById("provinciaDelCliente").value;
+    sessionStorage.setItem("provinciaDelCliente", provinciaCliente);
+
+    let localidadCliente = document.getElementById("localidadDelCliente").value;
+    sessionStorage.setItem("localidadDelCliente", localidadCliente);
+
+    let direccionCliente = document.getElementById("direccionDelCliente").value;
+    sessionStorage.setItem("direccionDelCliente", direccionCliente);
+
+    let codigoPostalCliente = parseInt(document.getElementById("cpDelCliente").value);
+    sessionStorage.setItem("cpDelCliente", codigoPostalCliente);
+
+    let telefonoCliente = parseInt(document.getElementById("telefonoDelCliente").value);
+    sessionStorage.setItem("telefonoDelCliente", telefonoCliente);
+
+    const { montoPrestamo, cantCuotas, precioCuotas } = aceptaPrestamo();
+
+    // Guarda los datos almacenados en la clase registrarCliente
+    arrayClientes.push(new registrarCliente(nombreApellido, dniCliente, edadCliente, paisCliente, provinciaCliente, localidadCliente, direccionCliente, codigoPostalCliente, telefonoCliente, montoPrestamo, cantCuotas, precioCuotas));
+
 
     console.log("Usuario registrado");
 
 }
 
+let botonForm = document.getElementById("btnFormulario");
+botonForm.addEventListener("click", formCliente);
 
-
-
-//Prompt que solicita datos para el prestamo solicitado
-
-/* let montoPrestamo = parseInt(prompt("ingrese el monto que desea recibir")); */
-
-/* let cantCuotas = parseInt(prompt("ingrese la cantidad de cantCuotas: 1 - 3 - 6 - 12")); */
-
-
-//Variables que almacenan el precio total con intereses y que divide el mismo por la cant de cuotas seleccionadas
-/* let precioTotal = montoPrestamo + calcularInteres(montoPrestamo, cantCuotas);
-let precioCuotas = parseInt(precioTotal / cantCuotas); */
-
-//Alerta que informa el valor total, la cant de cuotas y el monto por cuota
-/* alert(`Debera abonar $${precioTotal} o $${precioCuotas} en ${cantCuotas}`); */
-
-
-
-//Recoleccion de datos de los clientes que aceptan las ofertas
-/* let nombreApellido = prompt("Ingrese su nombre y apellido");
-sessionStorage.setItem("NombreYApellido", nombreApellido);
-let dniCliente = parseInt(prompt("Ingrese su número de dni"));
-sessionStorage.setItem("dniDelCliente", dniCliente);
-let edadCliente = parseInt(prompt("Ingrese su edad"));
-sessionStorage.setItem("edadDelCliente", edadCliente);
-let paisCliente = prompt("Seleccione su país de residencia");
-sessionStorage.setItem("paisDelCliente", paisCliente);
-let provinciaCliente = prompt("Seleccione su provincia de residencia");
-sessionStorage.setItem("provinciaDelCliente", provinciaCliente);
-let localidadCliente = prompt("Seleccione su localidad de residencia");
-sessionStorage.setItem("localidadDelCliente", localidadCliente);
-let direccionCliente = prompt("Seleccione la dirección de su domicilio");
-sessionStorage.setItem("direccionDelCliente", direccionCliente);
-let codigoPostalCliente = parseInt(prompt("Ingrese su código postal"));
-sessionStorage.setItem("cpDelCliente", codigoPostalCliente);
-let telefonoCliente = parseInt(prompt("Ingrese su número de teléfono"));
-sessionStorage.setItem("telefonoDelCliente", telefonoCliente); */
-
-
-//Guarda los datos almacenados en la clase registrarCliente
-arrayClientes.push(new registrarCliente(nombreApellido, dniCliente, edadCliente, paisCliente, provinciaCliente, localidadCliente, direccionCliente, codigoPostalCliente, telefonoCliente, montoPrestamo, cantCuotas, precioCuotas));
-
-arrayClientes[0].agradecerCliente();
 
 console.log(arrayClientes);
