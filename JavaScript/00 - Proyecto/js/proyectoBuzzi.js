@@ -39,7 +39,7 @@ class registrarCliente {
 
 //Función que calcula el precio con intereses mediante switch
 function calcularInteres(montoPrestamo, cantCuotas) {
-
+    
     let interes = 0;
 
     switch (cantCuotas) {
@@ -74,7 +74,7 @@ function aceptaPrestamo() {
 
     let planillaRegistro = document.getElementById("formClientes");
     planillaRegistro.innerHTML = `
-            <div class="row g-3">
+            <div class="row g-3" id="formContacto">
                     <div class="col">
                         <input type="text" class="form-control" placeholder="Nombre y Apellido" aria-label="Nombre y Apellido" id="NombreYApellido">
                     </div>
@@ -103,7 +103,7 @@ function aceptaPrestamo() {
                         <input type="text" class="form-control" placeholder="Teléfono" aria-label="Telefono" id="telefonoDelCliente">
                     </div>
                     <div class="d-grid gap-2 col-6 mx-auto">
-                        <button class="btn btn-primary" type="button"  onclick="formCliente()">Enviar formulario</button>
+                        <button class="btn btn-primary" type="button" id="boton1" onclick="formCliente(); creditoAprobado()">Enviar formulario</button>
                     </div>
                     
 
@@ -116,7 +116,12 @@ function aceptaPrestamo() {
     return { montoPrestamo, cantCuotas, precioCuotas };
 }
 
+function creditoAprobado() {
 
+    $("#formContacto").hide();
+    $(".contForms").append(`<span class="saludoMensaje">Gracias por confiar en nosotros, proximamente nos estaremos comunicando con ustéd para informarle sobre el estado del crédito.</span>`);
+
+}
 
 function formCliente() {
 

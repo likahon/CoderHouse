@@ -110,3 +110,14 @@ body{
     margin-top: 10%;
     
 }
+
+.saludoMensaje{
+    height: 100px;
+    width: 70%;
+    background-color: rgb(158, 250, 158);
+    text-align: center;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
