@@ -119,7 +119,12 @@ function aceptaPrestamo() {
 function creditoAprobado() {
 
     $("#formContacto").hide();
-    $(".contForms").append(`<span class="saludoMensaje">Gracias por confiar en nosotros, proximamente nos estaremos comunicando con ustéd para informarle sobre el estado del crédito.</span>`);
+
+    $(".contForms").append(`<span class="saludoMensaje" style="display: none;">Gracias por confiar en nosotros, proximamente nos estaremos comunicando con ustéd para informarle sobre el estado del crédito.</span>`);
+
+    $("span").css("color", "white")
+                .fadeIn(1000);
+    
 
 }
 

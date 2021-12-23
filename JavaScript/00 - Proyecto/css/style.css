@@ -114,7 +114,7 @@ body{
 .saludoMensaje{
     height: 100px;
     width: 70%;
-    background-color: rgb(158, 250, 158);
+    background-color: rgb(0, 197, 0);
     text-align: center;
     font-weight: 700;
     display: flex;

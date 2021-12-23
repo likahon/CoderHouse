@@ -1,2 +1,3 @@
-let parrafo = $("p");
-console.log(parrafo);
+
+
+$("#prueba").fadeIn(2000);
