@@ -121,3 +121,12 @@ body{
     align-items: center;
     font-size: 20px;
 }
+
+.weatherReport{
+    _background-color: rebeccapurple;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

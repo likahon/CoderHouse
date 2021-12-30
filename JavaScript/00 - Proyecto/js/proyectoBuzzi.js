@@ -123,7 +123,8 @@ function creditoAprobado() {
     $(".contForms").append(`<span class="saludoMensaje" style="display: none;">Gracias por confiar en nosotros, proximamente nos estaremos comunicando con ustéd para informarle sobre el estado del crédito.</span>`);
 
     $("span").css("color", "white")
-                .fadeIn(1000);
+                .fadeIn(1000)
+                .fadeOut(1000);
     
 
 }
@@ -192,4 +193,67 @@ let simularUnPrestamo = document.getElementById("simularPrestamo");
 simularUnPrestamo.addEventListener("click", simularPrestamo);
 
 
-console.log(arrayClientes);
+/* Clima y geolocalización */
+
+let posicion = navigator.geolocation.getCurrentPosition( mostrarUbicacion);
+
+function mostrarUbicacion(posicion) {
+    let latitud = posicion.coords.latitude;
+    let longitud = posicion.coords.longitude;
+    console.log(latitud, longitud);
+}
+
+let urlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${latitud}&lon=${longitud}&appid=18ae37ca5454eb00e30a056c05f23ae6`;
+
+$("#botonGetWeather").click(function(){
+
+    $.get( urlWeather, function(datos){
+
+        
+
+        let temp_celsius = datos.main.temp - 273.15;
+        let humedad = datos.main.humidity;
+        let iconImage = datos.weather[0].icon;
+        let iconTemp = "http://openweathermap.org/img/w/" + iconImage + ".png";
+        console.log(datos);
+        console.log(datos.weather[0].description);
+
+        let contWeather = `<div>
+        <h2>${datos.name}</h2>
+        <img src="${iconTemp}"></img>
+        <p>Clima: ${datos.weather[0].description}</p>
+        <p>Temp max: ${datos.main.temp_max}</p>
+        <p>Temp max: ${datos.main.temp_min}</p>
+        
+        </div>`
+
+        $("#weatherReport").append(contWeather);
+        
+        
+    })
+
+});
+
+/* let climaAJAX = $.ajax({
+
+    
+
+    url:"https://api.openweathermap.org/data/2.5/weather",
+    type:"GET",
+    data:{
+        lat:'${latitud}',
+        lon:'${longitud}'
+        appid:"18ae37ca5454eb00e30a056c05f23ae6",
+        dataType:"jsonp",
+        units:"metric"
+    },
+
+    success:function(data){
+        console.log(data);
+    }
+    
+}) */
+
+/* console.log(climaAJAX); */
+
+
