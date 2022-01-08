@@ -158,6 +158,7 @@ function formCliente() {
     let telefonoCliente = parseInt(document.getElementById("telefonoDelCliente").value);
     sessionStorage.setItem("telefonoDelCliente", telefonoCliente);
 
+    //Destructuring de las variables provenientes de la función aceptaPrestamo
     const { montoPrestamo, cantCuotas, precioCuotas } = aceptaPrestamo();
 
     // Guarda los datos almacenados en la clase registrarCliente
