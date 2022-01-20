@@ -197,14 +197,17 @@ simularUnPrestamo.addEventListener("click", simularPrestamo);
 /* Clima y geolocalización */
 
 let posicion = navigator.geolocation.getCurrentPosition( mostrarUbicacion);
+var urlWeather = "";
 
 function mostrarUbicacion(posicion) {
     let latitud = posicion.coords.latitude;
     let longitud = posicion.coords.longitude;
     console.log(latitud, longitud);
+    
+    urlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${latitud}&lon=${longitud}&appid=18ae37ca5454eb00e30a056c05f23ae6`;
 }
 
-let urlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${latitud}&lon=${longitud}&appid=18ae37ca5454eb00e30a056c05f23ae6`;
+
 
 $("#botonGetWeather").click(function(){
 
