@@ -205,59 +205,29 @@ function mostrarUbicacion(posicion) {
     console.log(latitud, longitud);
     
     urlWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${latitud}&lon=${longitud}&appid=18ae37ca5454eb00e30a056c05f23ae6`;
-}
-
-
-
-$("#botonGetWeather").click(function(){
 
     $.get( urlWeather, function(datos){
 
-        
 
         let temp_celsius = datos.main.temp - 273.15;
+        let temp_celsius_dec = temp_celsius.toFixed(2);
         let humedad = datos.main.humidity;
         let iconImage = datos.weather[0].icon;
         let iconTemp = "http://openweathermap.org/img/w/" + iconImage + ".png";
         console.log(datos);
         console.log(datos.weather[0].description);
 
-        let contWeather = `<div>
-        <h2>${datos.name}</h2>
+
+        let contWeather = `<div class="weatherReport">
+        <h3>${datos.name}</h3>
         <img src="${iconTemp}"></img>
-        <p>Clima: ${datos.weather[0].description}</p>
-        <p>Temp max: ${datos.main.temp_max}</p>
-        <p>Temp max: ${datos.main.temp_min}</p>
+        <p>Humedad: ${humedad}%</p>
+        <p>Temp max: ${temp_celsius_dec}°C</p>
         
         </div>`
 
         $("#weatherReport").append(contWeather);
         
         
-    })
-
-});
-
-/* let climaAJAX = $.ajax({
-
-    
-
-    url:"https://api.openweathermap.org/data/2.5/weather",
-    type:"GET",
-    data:{
-        lat:'${latitud}',
-        lon:'${longitud}'
-        appid:"18ae37ca5454eb00e30a056c05f23ae6",
-        dataType:"jsonp",
-        units:"metric"
-    },
-
-    success:function(data){
-        console.log(data);
-    }
-    
-}) */
-
-/* console.log(climaAJAX); */
-
-
+    });
+}
