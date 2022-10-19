@@ -30,3 +30,5 @@ Webpack: sirve para empaquetar los módulos (modularización).
 npm run build: hace lo mismo que npm start, pero en vez de hacerlo en el navegador, lo hace en local para luego llevarlo a un servidor de hosting (nos sirve para hace una build de react a JS, html, etc).
 
 Transpiling: 
+
+JSX:
