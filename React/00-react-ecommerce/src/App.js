@@ -1,14 +1,14 @@
 import './App.css'
-import Navbar from './components/Navbar'
-import Body from './components/Body'
+import Navbar from './components/NavBar'
+import ItemListContainer from './components/ItemListContainer'
 
 const App = () => {
   return (
     <>
     <Navbar />
-    <Body text='Texto1' />
-    <Body text='Texto2' />
-    <Body text='Texto3' />
+    <ItemListContainer text='Bienvenidos a mi tienda!.' />
+    {/* <ItemListContainer text='Texto2' />
+    <ItemListContainer text='Texto3' /> */}
     </>
   )
 }
