@@ -4,7 +4,7 @@ import CartWidget from "./CartWidget";
 const Navbar = () => {
   return (
     <>
-      <header className="header_comm">
+      <nav className="header_comm">
         <div className="left_right">
           <a className="name_comm" href="/#">./Lika_Shop</a>
         </div>
@@ -15,7 +15,7 @@ const Navbar = () => {
               <span className="login_nav">Login</span>
               <CartWidget/>
           </div>
-      </header>
+      </nav>
     </>
   )
 }
