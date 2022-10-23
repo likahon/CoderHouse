@@ -6,7 +6,7 @@ const Navbar = () => {
     <>
       <header className="header_comm">
         <div className="left_right">
-          <span className="name_comm">./Lika_Shop</span>
+          <a className="name_comm" href="/#">./Lika_Shop</a>
         </div>
 
         <Categories />
