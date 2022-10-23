@@ -17,10 +17,10 @@ body{
   flex-direction: row;
 }
 
-.left_right {
+.left_nav {
   display: flex;
   height: 100%;
-  width: 12rem;
+  width: 12.7rem;
   align-items: center;
   justify-content: center;
 }
@@ -40,7 +40,7 @@ body{
 
 .categories_nav{
   height: 100%;
-  width: 50%;
+  width: 30rem;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -68,7 +68,7 @@ body{
 .login_nav{
   color: #FB2576;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 900;
 }
 
@@ -90,6 +90,10 @@ body{
   .header_comm {
     height: 10rem;
     flex-direction: column;
+  }
+
+  .categories_nav{
+    width: 25rem;
   }
 
 }

@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="header_comm">
-        <div className="left_right">
+        <div className="left_nav">
           <a className="name_comm" href="/#">./Lika_Shop</a>
         </div>
 
