@@ -14,11 +14,11 @@ export const Video = () => {
 Ciclos de vida
 
 Montaje en DOM - componentDidMount: Hacer que el componente se monte en el DOM y se dibuje en pantalla.
-Cuando cargas la aplicacion, el componente se monta en el DOM y se muestra en la pantalla.
+Cuando cargas la aplicacion, el componente se monta en el DOM y se muestra en la pantalla. No tiene dependencias, array vacio.
 
-Actualización - componentDidUpdate: mientras que el ComponentDidMount se ejecuta después del primer render, el ComponentDidUpdate se ejecuta justo después de que el estado cambie y se provoque un nuevo render.
+Actualización - componentDidUpdate: mientras que el ComponentDidMount se ejecuta después del primer render, el ComponentDidUpdate se ejecuta justo después de que el estado cambie y se provoque un nuevo render. Tiene dependencias, se pueden sumar 1 o mas.
 
-Desmontaje del DOM - :
+Desmontaje del DOM - componentWillUnmount:
 
 
 Cuando el archivo App.js no contiene etiquetas, pasa a ser COMPONENTE CONTENEDOR (CONTAINER)
