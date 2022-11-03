@@ -25,6 +25,7 @@ const Video = (props) =>{
       }
         // rate++; ESTO NO SE PUEDE HACER EN REACT
     }
+ 
 
     return(
         <div className="video-container">
@@ -32,6 +33,7 @@ const Video = (props) =>{
         <img src={props.thumbnails} alt="Same alt value" />
       </div>
       <div className="video-info">
+        <button onClick={props.deleteVideo}>Delete Video</button>
         <h3>{props.title}</h3>
         <span>This video has {rate} stars</span>
         <button onClick={rateVideo}>Sumar estrella</button>
